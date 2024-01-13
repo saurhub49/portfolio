@@ -1,7 +1,7 @@
-import logo from '@/public/logo.svg';
-import name from '@/public/name.png'
+import profile from '@/public/profile.jpeg';
+import name from '@/public/name.png';
 
 export {
-    logo,
+    profile,
     name
 };
