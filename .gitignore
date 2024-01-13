@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Editor directories and files (commonly added)
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Temporary files (commonly added)
+*.log
+.cache/
+.cache-loader/
+
+# Miscellaneous (commonly added)
+*.md
+*.lock
+*.map
