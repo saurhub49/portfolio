@@ -48,12 +48,12 @@ const Navbar = () => {
 
     return (
         <nav className='z-[999] relative flex items-center justify-center'>
-            <div className={`fixed flex pt-28 lg:pt-36 gap-3 w-full justify-end md:justify-between items-center bg-opacity-80 backdrop-blur-[0.5rem] px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84`}>
+            <div className={`fixed flex pt-28 lg:pt-36 gap-3 w-full justify-between items-center bg-opacity-80 backdrop-blur-[0.5rem] px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84`}>
                 <motion.div className='lg:flex items-center gap-2'
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                 >
-                    <Image src={name} alt={'Saurabh Mahajan'} className="lg:block w-[18rem] object-contain hidden" />
+                    <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain" />
                 </motion.div>
 
                 <motion.div className='flex gap-3 h-[3.25rem] items-center'
