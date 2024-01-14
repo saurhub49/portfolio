@@ -90,7 +90,7 @@ const About = () => {
                     </p>
                     <p>
                         As a{' '}<span className='font-bold'>Gamer🎮</span>, and a{' '}<span className='font-bold'>Footballer⚽️</span>, I bring passion to both my professional and personal pursuits.
-                        A{' '}<span className='font-bold'>Wanderlust🏞</span> enthusiast and{' '}<span className='font-bold'>Orophile⛰</span>, I thrive on exploring diverse landscapes.
+                        A{' '}<span className='font-bold'>Wanderlust🛣️</span> enthusiast and{' '}<span className='font-bold'>Orophile⛰️</span>, I thrive on exploring diverse landscapes.
                         A{' '}<span className='font-bold'>Melomane🎵</span> and avid{' '}<span className='font-bold'>TV😍</span> enthusiast, I find joy in the finer aspects of life.
                         Also, a proud enthusiast of{' '}<span className='font-bold'>Tea☕️</span> who appreciates{' '}<span className='font-bold'>bike rides, beaches, and mountains</span> alike.
                     </p>
