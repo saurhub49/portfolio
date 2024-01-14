@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionHeader from './helpers/SectionHeader';
+import { useSectionInView } from './hooks/useSectionInView';
 import { aboutCarousel1, aboutCarousel2, aboutCarousel3, aboutCarousel4, aboutCarousel5, aboutCarousel6 } from '@/lib/assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFlip, Pagination, Navigation } from 'swiper/modules';
@@ -14,7 +15,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import '@/components/css/aboutCarouselStyles.css';
-import { useSectionInView } from './hooks/useSectionInView';
 
 const images = [
     aboutCarousel1,
@@ -41,7 +41,7 @@ const About = () => {
             <SectionHeader urlId='about' title='About Me' description='Who I Am in a Nutshell' />
             <div className={`flex flex-col sm:flex-row items-center justify-between gap-5`}>
                 <motion.div
-                    className='flex flex-shrink-0'
+                    className='flex flex-shrink-0 about'
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{
@@ -54,7 +54,9 @@ const About = () => {
                         effect={'flip'}
                         grabCursor={false}
                         loop={false}
-                        pagination={false}
+                        pagination={{
+                            clickable: true,
+                        }}
                         navigation={false}
                         modules={[EffectFlip, Autoplay, Pagination, Navigation]}
                         autoplay={{

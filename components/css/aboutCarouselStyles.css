@@ -1,16 +1,16 @@
-.swiper {
+.about .swiper {
     width: 300px;
     height: 400px;
 }
 
-.swiper-slide {
+.about .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
     height: 400px;
 }
 
-.swiper-slide img {
+.about .swiper-slide img {
     width: 300px;
     height: 400px;
     border-radius: 18px;

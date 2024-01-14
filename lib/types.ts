@@ -61,3 +61,11 @@ export interface Education {
     iconBg: string;
     points: string[];
 }
+
+export interface Testimonial {
+    testimonial: string;
+    name: string;
+    designation: string;
+    company: string;
+    image: StaticImageData;
+}

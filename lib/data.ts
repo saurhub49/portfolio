@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Education, Experience, Hero, LinkType, Project, ProjectTag, Social, Technology } from "./types";
-import { aws, bharati, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, python, reactjs, redux, s3, sppu, springboot, springframework, sunbeam, tailwind, typescript } from "./assets";
+import { Education, Experience, Hero, LinkType, Project, ProjectTag, Social, Technology, Testimonial } from "./types";
+import { akash, aws, bharati, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, manasi, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, prafull, python, reactjs, redux, s3, sppu, springboot, springframework, sujit, sunbeam, tailwind, typescript } from "./assets";
 
 export const links: LinkType[] = [
     {
@@ -383,4 +383,39 @@ export const educations: Education[] = [
             'Unique blend of strategic thinking, organizational prowess, and hands-on problem-solving equips tools to address complex software challenges with confidence, fostering a dynamic work environment.'
         ]
     }
+];
+
+export const testimonials: Testimonial[] = [
+    {
+        testimonial:
+            "I highly recommend Saurabh as a dedicated and knowledgeable professional in software development. His invaluable contributions during our postgraduate course were evident in both technical discussions and project development. Saurabh's exceptional problem-solving skills make him an asset to any team or project.",
+        name: "Prafull Bagde",
+        designation: "Product Manager",
+        company: "Qollabra",
+        image: prafull,
+    },
+    {
+        testimonial:
+            "What sets Saurabh apart is not just his technical prowess, but his unwavering commitment to helping others succeed. His mentorship has been instrumental in guiding fellow students through complex subjects, demonstrating both patience and a genuine passion for knowledge sharing.",
+        name: "Akash Deshpande",
+        designation: "Project Engineer",
+        company: "CDAC ACTS",
+        image: akash,
+    },
+    {
+        testimonial:
+            "Saurabh's support went beyond just coding. He took the time to understand each team member's learning style.  His collaborative spirit and encouragement created a space where everyone felt comfortable expressing ideas.",
+        name: "Sujit Kadam",
+        designation: "Software Engineer",
+        company: "Bajaj Finserv",
+        image: sujit,
+    },
+    {
+        testimonial:
+            "I highly recommend Saurabh for his outstanding contributions as the sponsorship coordinator for our college tech fest. His meticulous research and strategic approach led to successful negotiations, ensuring optimal visibility for sponsors.",
+        name: "Manasi Kulkarni",
+        designation: "Student",
+        company: "UCD Smurfit School",
+        image: manasi,
+    },
 ];

@@ -1,0 +1,29 @@
+/* Default styles */
+.testimonial .swiper {
+    max-width: 800px;
+    max-height: 500px;
+}
+
+.testimonial .swiper-slide {
+    width: fit-content;
+    flex-shrink: 0;
+    display: block;
+}
+.swiper-custom-pagination .swiper-pagination-bullet {
+    display: flex;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .testimonial .swiper {
+        max-width: 300px;
+        max-height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .testimonial .swiper {
+        max-width: 400px;
+        max-height: 500px;
+    }
+}

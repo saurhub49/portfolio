@@ -45,6 +45,11 @@ import sunbeam from '@/public/education/sunbeam.png';
 import sppu from '@/public/education/sppu.png';
 import bharati from '@/public/education/bharati.png';
 
+import prafull from '@/public/testimonials/prafull.png';
+import akash from '@/public/testimonials/akash.png';
+import sujit from '@/public/testimonials/sujit.png';
+import manasi from '@/public/testimonials/manasi.png';
+
 
 export {
     profile,
@@ -91,5 +96,10 @@ export {
 
     sunbeam,
     sppu,
-    bharati
+    bharati,
+
+    prafull,
+    akash,
+    sujit,
+    manasi
 };
