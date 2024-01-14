@@ -19,6 +19,7 @@ export interface Social {
     name: string;
     link: string;
     icon: IconType;
+    iconColor: string;
 }
 
 export interface Experience {
@@ -34,4 +35,18 @@ export interface Experience {
 export interface Technology {
     name: string;
     icon: StaticImageData;
+}
+
+export interface ProjectTag {
+    name: string;
+    color: string;
+}
+
+export interface Project {
+    name: string;
+    description: string;
+    tags: ProjectTag[];
+    image: StaticImageData;
+    link: string;
+    extraLink?: string;
 }

@@ -66,7 +66,7 @@ const Hero = () => {
                         socials.map((social) => (
                             <a key={social.name} href={social.link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-md focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer'>
                                 {React.createElement(social.icon, {
-                                    style: { width: '24px', height: '24px' }
+                                    style: { width: '24px', height: '24px', color: social.iconColor }
                                 })}
                             </a>
                         ))

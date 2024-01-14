@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Experience, Hero, LinkType, Social, Technology } from "./types";
-import { aws, bootstrap, company, csharp, css, docker, dotnet, git, html, java, javascript, lambda, mui, mysql, postgresql, python, reactjs, redux, s3, springboot, springframework, tailwind, typescript } from "./assets";
+import { Experience, Hero, LinkType, Project, ProjectTag, Social, Technology } from "./types";
+import { aws, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, python, reactjs, redux, s3, springboot, springframework, tailwind, typescript } from "./assets";
 
 export const links: LinkType[] = [
     {
@@ -47,17 +47,20 @@ export const socials: Social[] = [
     {
         name: 'LinkedIn',
         link: 'https://www.linkedin.com/in/saurabh-mahajan-dev/',
-        icon: FaLinkedin
+        icon: FaLinkedin,
+        iconColor: '#0077b5'
     },
     {
         name: 'Github',
         link: 'https://github.com/saurabhthecodewizard/',
-        icon: FaGithub
+        icon: FaGithub,
+        iconColor: '#333'
     },
     {
         name: 'Instagram',
         link: 'https://www.instagram.com/eirinikos._/',
-        icon: FaInstagramSquare
+        icon: FaInstagramSquare,
+        iconColor: '#E1306C'
     }
 ];
 
@@ -147,12 +150,20 @@ export const skills: Technology[] = [
         icon: reactjs,
     },
     {
+        name: "Next JS",
+        icon: nextjs,
+    },
+    {
         name: "Redux Toolkit",
         icon: redux,
     },
     {
         name: "Git",
         icon: git,
+    },
+    {
+        name: "Github",
+        icon: github,
     },
     {
         name: "Material UI",
@@ -182,4 +193,148 @@ export const skills: Technology[] = [
         name: "AWS Lambda",
         icon: lambda,
     }
+];
+
+export const projects: Project[] = [
+    {
+        name: "Portfolio",
+        description:
+            "The Portfolio Project serves as an extensive online platform crafted to highlight the expertise, projects, professional journey, and accomplishments of a software developer. This web application is meticulously designed to present a captivating and interactive display of the developer's skills and experiences. Functioning as a dynamic digital resume, the portfolio offers a unique space for the developer to showcase their career path, skills, and noteworthy achievements in a visually appealing manner.",
+        tags: [
+            {
+                name: "React",
+                color: "#60A5FA",
+            },
+            {
+                name: "NextJS",
+                color: "#6EE7B7",
+            },
+            {
+                name: "Typescript",
+                color: "#FCD34D",
+            },
+            {
+                name: "Swiper",
+                color: "#A855F7",
+            },
+            {
+                name: "Framer",
+                color: "#FF7EB6",
+            }
+        ] as ProjectTag[],
+        image: portfolio,
+        link: "https://github.com/saurabhthecodewizard/portfolio",
+    },
+    {
+        name: "3d Portfolio",
+        description:
+            "The 3d Portfolio Project is a comprehensive web application designed to showcase a software developer's skills, projects, experiences, and achievements in a visually appealing and interactive manner. This portfolio acts as a digital resume and a platform for the developer to present their professional journey, skills, and accomplishments.",
+        tags: [
+            {
+                name: "React",
+                color: "#60A5FA",
+            },
+            {
+                name: "Tailwind",
+                color: "#6EE7B7",
+            },
+            {
+                name: "TypeScript",
+                color: "#FCD34D",
+            },
+            {
+                name: "ThreeJS",
+                color: "#A855F7",
+            },
+            {
+                name: "Framer",
+                color: "#FF7EB6",
+            },
+            {
+                name: "React-tilt",
+                color: "#FED7AA",
+            },
+        ] as ProjectTag[],
+        image: portfolio3d,
+        link: "https://github.com/saurabhthecodewizard/3d-portfolio-for-dev",
+    },
+    {
+        name: "Opus",
+        description:
+            "A corporate management system which is a specialized solution designed to facilitate efficient management of resources within an organization. This comprehensive system streamlines various HR processes, including employee onboarding, attendance tracking, project and task management.",
+        tags: [
+            {
+                name: "Java",
+                color: "#60A5FA",
+            },
+            {
+                name: "Spring Boot",
+                color: "#6EE7B7",
+            },
+            {
+                name: "OpenAPI",
+                color: "#FCD34D",
+            },
+            {
+                name: "MySQL",
+                color: "#A855F7",
+            },
+            {
+                name: "JavaScript",
+                color: "#FF7EB6",
+            },
+            {
+                name: "TypeScript",
+                color: "#FB923C",
+            },
+            {
+                name: "React",
+                color: "#A5F3EB",
+            },
+            {
+                name: "Redux",
+                color: "#D4A5A5",
+            },
+            {
+                name: "MUI",
+                color: "#FED7AA",
+            },
+        ] as ProjectTag[],
+        image: opus,
+        link: "https://github.com/saurabhthecodewizard/opus-client",
+        extraLink: "https://github.com/saurabhthecodewizard/opus-server",
+    },
+    {
+        name: "Emerald Oasis",
+        description:
+            "A Multi-Cuisine Food Ordering System which revolutionizes the dining experience for customers of the restaurant chain, Emerald Oasis. This intuitive system offers an online ordering solution that allows customers to explore a diverse multi-cuisine menu, place orders, all from the comfort of their homes or on-the-go.",
+        tags: [
+            {
+                name: "Java",
+                color: "#60A5FA",
+            },
+            {
+                name: "Spring Boot",
+                color: "#6EE7B7",
+            },
+            {
+                name: "MySQL",
+                color: "#FCD34D",
+            },
+            {
+                name: "JavaScript",
+                color: "#A855F7",
+            },
+            {
+                name: "React",
+                color: "#FF7EB6",
+            },
+            {
+                name: "Bootstrap",
+                color: "#FED7AA",
+            },
+        ] as ProjectTag[],
+        image: emeraldoasis,
+        link: "https://github.com/saurabhthecodewizard/Emerald-Oasis",
+    },
 ];

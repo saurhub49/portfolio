@@ -39,7 +39,14 @@ const Skills = () => {
                             }}
                             custom={index}
                         >
-                            <Image className='focus:scale-125 hover:scale-125 active:scale-110 transition' height={80} width={80} alt={skill.name} src={skill.icon} />
+                            <Image 
+                            className='focus:scale-125 hover:scale-125 active:scale-110 transition' 
+                            height={0} 
+                            width={0} 
+                            alt={skill.name} 
+                            src={skill.icon} 
+                            style={{width:'80px', height: "auto" }}
+                            />
                         </motion.div>
                     ))
                 }
