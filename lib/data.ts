@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Experience, Hero, LinkType, Social } from "./types";
-import { company } from "./assets";
+import { Experience, Hero, LinkType, Social, Technology } from "./types";
+import { aws, bootstrap, company, csharp, css, docker, dotnet, git, html, java, javascript, lambda, mui, mysql, postgresql, python, reactjs, redux, s3, springboot, springframework, tailwind, typescript } from "./assets";
 
 export const links: LinkType[] = [
     {
@@ -91,4 +91,95 @@ export const experiences: Experience[] = [
             "Implemented advanced filtering functionality for TTP Coverages with .NET Core, resulting in a 40% improvement in data analysis speed and accuracy, optimizing the platform for large-scale data processing.",
         ],
     },
+];
+
+export const skills: Technology[] = [
+    {
+        name: "Java",
+        icon: java,
+    },
+    {
+        name: "Python",
+        icon: python,
+    },
+    {
+        name: "HTML 5",
+        icon: html,
+    },
+    {
+        name: "CSS 3",
+        icon: css,
+    },
+    {
+        name: "JavaScript",
+        icon: javascript,
+    },
+    {
+        name: "TypeScript",
+        icon: typescript,
+    },
+    {
+        name: "C#",
+        icon: csharp,
+    },
+    {
+        name: "Spring Boot",
+        icon: springboot,
+    },
+    {
+        name: "Spring Framework",
+        icon: springframework,
+    },
+    {
+        name: ".NET Core",
+        icon: dotnet,
+    },
+    {
+        name: "MySQL",
+        icon: mysql,
+    },
+    {
+        name: "PostgreSQL",
+        icon: postgresql,
+    },
+    {
+        name: "React JS",
+        icon: reactjs,
+    },
+    {
+        name: "Redux Toolkit",
+        icon: redux,
+    },
+    {
+        name: "Git",
+        icon: git,
+    },
+    {
+        name: "Material UI",
+        icon: mui,
+    },
+    {
+        name: "Tailwind CSS",
+        icon: tailwind,
+    },
+    {
+        name: "Bootstrap",
+        icon: bootstrap,
+    },
+    {
+        name: "docker",
+        icon: docker,
+    },
+    {
+        name: "AWS",
+        icon: aws,
+    },
+    {
+        name: "AWS S3",
+        icon: s3,
+    },
+    {
+        name: "AWS Lambda",
+        icon: lambda,
+    }
 ];

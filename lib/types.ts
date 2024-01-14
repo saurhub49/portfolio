@@ -30,3 +30,8 @@ export interface Experience {
     date: string;
     points: string[];
 }
+
+export interface Technology {
+    name: string;
+    icon: StaticImageData;
+}

@@ -12,7 +12,7 @@ const Experience = () => {
     const { ref } = useSectionInView('Experience', 0.4);
 
     return (
-        <section ref={ref} className=''>
+        <section ref={ref}>
             <SectionHeader urlId='experience' title='Experience' description='My journey in the industry so far' />
             <VerticalTimeline lineColor=''>
                 {
