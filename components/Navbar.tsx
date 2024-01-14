@@ -8,8 +8,10 @@ import { BsMoon, BsSun } from 'react-icons/bs';
 import { name } from '@/lib/assets';
 import Image from 'next/image';
 import { BiMenu, BiX } from 'react-icons/bi';
+import useActiveSectionContext from '@/context/useActiveSectionContext';
 
 const Navbar = () => {
+    const { activeSection, setActiveSection, setLastClick } = useActiveSectionContext();
     const [theme, setTheme] = React.useState("light");
     const [toggle, setToggle] = React.useState<boolean>(false);
     const menuRef = React.useRef<HTMLDivElement>(null);
@@ -26,11 +28,14 @@ const Navbar = () => {
         setToggle(!toggle)
     }, [toggle]);
 
-    const handleLinkClickHandler = React.useCallback(() => {
+    const onClickLinkHandler = React.useCallback((event: React.MouseEvent) => {
+        const selectedSectionName = event.currentTarget.ariaLabel as string;
+        setActiveSection(selectedSectionName);
+        setLastClick(Date.now());
         setToggle(false);
-    }, []);
+    }, [setActiveSection, setLastClick]);
 
-    const handleClickOutsideHandler = React.useCallback(
+    const onClickOutsideHandler = React.useCallback(
         (event: MouseEvent) => {
             if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
                 setToggle(false);
@@ -40,11 +45,11 @@ const Navbar = () => {
     );
 
     React.useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutsideHandler);
+        document.addEventListener('mousedown', onClickOutsideHandler);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutsideHandler);
+            document.removeEventListener('mousedown', onClickOutsideHandler);
         };
-    }, [handleClickOutsideHandler]);
+    }, [onClickOutsideHandler]);
 
     return (
         <nav className='z-[999] relative flex items-center justify-center'>
@@ -61,18 +66,29 @@ const Navbar = () => {
                     animate={{ y: 0, opacity: 1 }}
                 >
                     <div className='lg:flex hidden top-[1.7rem h-[initial] rounded-full border border-white border-opacity-40 bg-white shadow-lg shadow-black/[0.05] px-3'>
-                        <ul className='flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500'>
+                        <ul className='flex flex-wrap items-center justify-center gap-1 text-[0.9rem] font-medium text-gray-500'>
                             {
                                 links.map((link) => (
-                                    <motion.li key={link.href} className='h-3/4 flex items-center justify-center'
+                                    <motion.li key={link.href} className={`h-3/4 flex items-center justify-center`}
                                         initial={{ y: -100, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
                                     >
-                                        <Link href={link.href} className='flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition'>
-                                            {
-                                                link.name
-                                            }
-                                        </Link>
+                                        <motion.div
+                                            className={`flex w-full items-center justify-center px-3 py-2 my-1 hover:text-gray-950 transition 
+                                        ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full' : ''}`}
+                                            layoutId="activeSection"
+                                            transition={{
+                                                type: 'spring',
+                                                stiffness: 380,
+                                                damping: 30
+                                            }}
+                                        >
+                                            <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href}>
+                                                {
+                                                    link.name
+                                                }
+                                            </Link>
+                                        </motion.div>
                                     </motion.li>
                                 ))
                             }
@@ -91,7 +107,7 @@ const Navbar = () => {
 
                 <motion.div
                     ref={menuRef}
-                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed  mt-16 py-4 rounded-2xl self-start max-h-[32rem] w-60 bg-white`}
+                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 bg-white`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: toggle ? 1 : 0, scale: toggle ? 1 : 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -103,7 +119,8 @@ const Navbar = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.2, delay: 0.1 }}
                             >
-                                <Link onClick={handleLinkClickHandler} href={link.href} className='px-3 py-2 hover:text-gray-950 transition'>
+                                <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href} className={`px-3 py-2 hover:text-gray-950 transition 
+                                ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full' : ''}`}>
                                     {link.name}
                                 </Link>
                             </motion.li>

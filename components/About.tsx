@@ -13,7 +13,8 @@ import 'swiper/css/effect-flip';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import '@/components/css/aboutCarouselStyles.css'
+import '@/components/css/aboutCarouselStyles.css';
+import { useSectionInView } from './hooks/useSectionInView';
 
 const images = [
     aboutCarousel1,
@@ -26,17 +27,19 @@ const images = [
 
 
 const About = () => {
+    const { ref } = useSectionInView('About');
     const progressCircle = React.useRef(null);
     const progressContent = React.useRef(null);
-    const onAutoplayTimeLeft = (s: any, time: any, progress: any) => {
+    const onAutoplayTimeLeft = (_s: any, time: any, progress: any) => {
         (progressCircle.current as any)?.style.setProperty('--progress', 1 - progress);
         if (!!(progressContent.current as any)) {
             (progressContent.current as any).textContent = `${Math.ceil(time / 1000)}s`;
         }
     };
+
     return (
-        <section className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'>
-            <SectionHeader title='About Me' description='A brief introduction about who I am' />
+        <section ref={ref} className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'>
+            <SectionHeader urlId='about' title='About Me' description='A brief introduction about who I am' />
             <div className={`flex flex-col sm:flex-row items-center justify-between gap-5`}>
                 <motion.div
                     className='flex flex-shrink-0'
@@ -100,7 +103,7 @@ const About = () => {
                 </motion.div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default About;

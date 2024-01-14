@@ -1,15 +1,18 @@
 "use client";
 
+import React from 'react';
 import { profile } from '@/lib/assets';
 import { heroData, socials } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
 import { HiDownload } from 'react-icons/hi';
+import { useSectionInView } from './hooks/useSectionInView';
 
 const Hero = () => {
+    const { ref } = useSectionInView('Home');
+
     return (
-        <section className='text-center md:px-48'>
+        <section ref={ref} className='text-center md:px-48'>
             <div className={`flex items-center justify-center`}>
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
@@ -71,7 +74,7 @@ const Hero = () => {
                 </div>
             </motion.div>
         </section>
-    )
-}
+    );
+};
 
 export default Hero;

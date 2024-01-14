@@ -15,7 +15,7 @@ const SectionDivider = () => {
                 className="hidden h-16 w-1 sm:block"
             ></div>
         </motion.div>
-    )
-}
+    );
+};
 
 export default SectionDivider;
