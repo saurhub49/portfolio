@@ -25,7 +25,6 @@ const images = [
     aboutCarousel6
 ];
 
-
 const About = () => {
     const { ref } = useSectionInView('About');
     const progressCircle = React.useRef(null);

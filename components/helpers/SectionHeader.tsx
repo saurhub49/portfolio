@@ -15,9 +15,8 @@ const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
-            id={urlId}
         >
-            <span className="uppercase text-2xl">{title}</span>
+            <span id={urlId} className="uppercase text-2xl scroll-mt-48">{title}</span>
             <div className='w-12 h-1 bg-[#8266ff] my-2'></div>
             {description && <span className="text-gray-500">
                 {description}
