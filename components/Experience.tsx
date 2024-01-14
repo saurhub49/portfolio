@@ -13,7 +13,7 @@ const Experience = () => {
 
     return (
         <section ref={ref}>
-            <SectionHeader urlId='experience' title='Experience' description='My journey in the industry so far' />
+            <SectionHeader urlId='experience' title='Experience' description='My Professional Odyssey and Experience' />
             <VerticalTimeline lineColor=''>
                 {
                     experiences.map((experience) => (

@@ -38,7 +38,7 @@ const About = () => {
 
     return (
         <section ref={ref} className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'>
-            <SectionHeader urlId='about' title='About Me' description='A brief introduction about who I am' />
+            <SectionHeader urlId='about' title='About Me' description='Who I Am in a Nutshell' />
             <div className={`flex flex-col sm:flex-row items-center justify-between gap-5`}>
                 <motion.div
                     className='flex flex-shrink-0'

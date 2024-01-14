@@ -41,6 +41,10 @@ import portfolio3d from '@/public/projects/3d-portfolio.png';
 import opus from '@/public/projects/opus.png';
 import emeraldoasis from '@/public/projects/emerald-oasis.png';
 
+import sunbeam from '@/public/education/sunbeam.png';
+import sppu from '@/public/education/sppu.png';
+import bharati from '@/public/education/bharati.png';
+
 
 export {
     profile,
@@ -83,5 +87,9 @@ export {
     portfolio,
     portfolio3d,
     opus,
-    emeraldoasis
+    emeraldoasis,
+
+    sunbeam,
+    sppu,
+    bharati
 };

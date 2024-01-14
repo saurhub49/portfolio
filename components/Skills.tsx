@@ -25,7 +25,7 @@ const Skills = () => {
     const { ref } = useSectionInView('Skills');
     return (
         <section ref={ref} className='mt-28'>
-            <SectionHeader urlId='skills' title='Skills' description='Tools and Technologies I am familiar with' />
+            <SectionHeader urlId='skills' title='Skills' description='Tools and Technologies I am proficient in' />
             <div className='flex flex-wrap gap-20 items-center justify-center'>
                 {
                     skills.map((skill, index) => (

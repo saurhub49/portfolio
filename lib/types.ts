@@ -26,9 +26,9 @@ export interface Experience {
     id: number;
     title: string;
     companyName: string;
+    date: string;
     icon: StaticImageData;
     iconBg: string;
-    date: string;
     points: string[];
 }
 
@@ -49,4 +49,15 @@ export interface Project {
     image: StaticImageData;
     link: string;
     extraLink?: string;
+}
+
+export interface Education {
+    id: number;
+    degree: string;
+    grade: string;
+    university: string;
+    date: string;
+    icon: StaticImageData;
+    iconBg: string;
+    points: string[];
 }

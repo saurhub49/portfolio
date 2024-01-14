@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Experience, Hero, LinkType, Project, ProjectTag, Social, Technology } from "./types";
-import { aws, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, python, reactjs, redux, s3, springboot, springframework, tailwind, typescript } from "./assets";
+import { Education, Experience, Hero, LinkType, Project, ProjectTag, Social, Technology } from "./types";
+import { aws, bharati, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, python, reactjs, redux, s3, sppu, springboot, springframework, sunbeam, tailwind, typescript } from "./assets";
 
 export const links: LinkType[] = [
     {
@@ -337,4 +337,50 @@ export const projects: Project[] = [
         image: emeraldoasis,
         link: "https://github.com/saurabhthecodewizard/Emerald-Oasis",
     },
+];
+
+export const educations: Education[] = [
+    {
+        id: 1,
+        degree: 'PostGraduate Diploma in Advance Computing',
+        grade: '84.63%',
+        university: 'Sunbeam Institute of Information Technology, Pune, India',
+        date: 'Sep 2021 - Apr 2022',
+        icon: sunbeam,
+        iconBg: '#FAF9F6',
+        points: [
+            'Honored to possess a PG Diploma in Advanced Computing and securing All India Rank 1 in the CCAT entrance exam.',
+            'The diverse syllabus covered critical subjects such as OS, Software Development Methodologies, OOP, DSA, Database Technologies, Web-based Java Programming, Web Programming, and .NET, shaping my skill set.',
+            'Led restaurant management website project, guiding team to develop a robust solution using Spring, React, and MySQL, showcasing technical acumen and effective leadership.',
+            'Top-ranking academic excellence combined with practical project leadership provides a versatile skill set for tackling complex challenges in software development.',
+        ]
+    },
+    {
+        id: 2,
+        degree: 'Bachelor of Engineering (Mechanical)',
+        grade: '7.59',
+        university: 'Savitribai Phule Pune University, India',
+        date: 'Aug 2017 - Nov 2020',
+        icon: sppu,
+        iconBg: '#FAF9F6',
+        points: [
+            'Sponsorship Coordinator role in the final year showcased strategic thinking and effective coordination, directly transferrable to software development.',
+            'Department Head role in the third year honed project management and organizational abilities, emphasizing precision and attention to detail—qualities seamlessly transitioned into the software engineering role.',
+            'Leadership experiences contribute to a results-oriented mindset and collaborative approach, enhancing the ability to thrive in cross-functional software development teams.'
+        ]
+    },
+    {
+        id: 3,
+        degree: 'Diploma in Mechanical Engineering',
+        grade: '81.53%',
+        university: 'Bharati VidyaPeeth Deemed University Pune, India',
+        date: 'Aug 2014 - Jun 2017',
+        icon: bharati,
+        iconBg: '#FAF9F6',
+        points: [
+            'Diploma and diverse co-curriculars strengthened hands-on problem-solving skills for software engineering challenges.',
+            'Active project participation showcased adeptness in applying engineering principles, fostering crucial collaborative and communication skills.',
+            'Unique blend of strategic thinking, organizational prowess, and hands-on problem-solving equips tools to address complex software challenges with confidence, fostering a dynamic work environment.'
+        ]
+    }
 ];
