@@ -4,9 +4,7 @@ import { profile } from '@/lib/assets';
 import { heroData, socials } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react'
-import { BsLinkedin } from 'react-icons/bs';
-import { FaGithub, FaInstagram } from 'react-icons/fa';
+import React from 'react';
 import { HiDownload } from 'react-icons/hi';
 
 const Hero = () => {
