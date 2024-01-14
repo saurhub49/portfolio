@@ -228,7 +228,7 @@ export const projects: Project[] = [
     {
         name: "3d Portfolio",
         description:
-            "The 3d Portfolio Project is a comprehensive web application designed to showcase a software developer's skills, projects, experiences, and achievements in a visually appealing and interactive manner. This portfolio acts as a digital resume and a platform for the developer to present their professional journey, skills, and accomplishments.",
+            "The 3D Portfolio Project is an innovative web application that leverages cutting-edge 3D components to showcase a software developer's skills, projects, experiences, and achievements. This visually appealing and interactive portfolio serves as a dynamic digital resume, offering a unique platform for the developer to present their professional journey and accomplishments with a focus on the immersive 3D elements integrated throughout the project with the help of the three js library.",
         tags: [
             {
                 name: "React",
