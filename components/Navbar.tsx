@@ -52,14 +52,14 @@ const Navbar = () => {
                     animate={{ x: 0, opacity: 1 }}
                 >
                     <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain" />
-                </motion.div>
+                </motion.div> 
 
                 <motion.div className='flex gap-3 h-[3.25rem] items-center'
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                 >
                     <div className='lg:flex hidden top-[1.7rem h-[initial] rounded-full border border-white border-opacity-40 bg-opacity-80 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-70'>
-                        <ul className='flex flex-wrap items-center justify-center gap-1 text-[0.9rem] font-medium text-gray-500'>
+                        <ul className='flex items-center justify-center gap-1 text-[0.9rem] font-medium text-gray-500'>
                             {
                                 links.map((link) => (
                                     <motion.li key={link.href} className={`h-3/4 flex items-center justify-center`}

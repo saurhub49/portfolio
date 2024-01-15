@@ -13,6 +13,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Saurabh | Portfolio',
   description: 'Full Stack Developer',
+  icons: {
+    icon: ['/favicons/favicon.ico'],
+    apple: ['/favicons/apple-touch-icon.png'],
+    shortcut: ['/favicons/apple-touch-icon.png']
+  }
 }
 
 export default function RootLayout({
@@ -38,5 +43,5 @@ export default function RootLayout({
         </ThemeContextProvider>
       </body>
     </html>
-  );
-};
+  )
+}
