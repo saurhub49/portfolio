@@ -73,7 +73,7 @@ const About = () => {
                     </Swiper>
                 </motion.div>
                 <motion.div
-                    className='flex flex-col'
+                    className='flex flex-col text-center sm:text-start'
                     initial={{ x: 200, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{

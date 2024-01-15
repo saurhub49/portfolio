@@ -221,13 +221,17 @@ export const projects: Project[] = [
                 color: "#FCD34D",
             },
             {
-                name: "Swiper",
+                name: "Tailwind",
                 color: "#A855F7",
             },
             {
                 name: "Framer",
                 color: "#FF7EB6",
-            }
+            },
+            {
+                name: "Swiper",
+                color: "#FED7AA",
+            },
         ] as ProjectTag[],
         image: portfolio,
         link: "https://github.com/saurabhthecodewizard/portfolio",

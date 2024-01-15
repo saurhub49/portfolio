@@ -90,7 +90,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <button
-                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] backdrop-blur-[0.1rem] sm:border sm:border-white sm:border-opacity-40 sm:shadow-2xl rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950`}
+                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] backdrop-blur-[0.1rem] sm:border sm:border-white sm:border-opacity-40 sm:bg-opacity-80 sm:shadow-2xl sm:shadow-black/[0.05] px-3 sm:dark:bg-gray-950 sm:dark:border-black/40 dark:bg-opacity-70 rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all`}
                         onClick={toggleTheme}
                     >
                         {theme === "light" ? <BsSun /> : <BsMoon />}

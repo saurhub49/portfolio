@@ -43,7 +43,7 @@ const Testimonials = () => {
                 {
                     testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                            <div className='flex flex-col gap-10 items-center justify-center text-center px-3 sm:h-[380px] sm:px-8 md:h-[350px] md:px-20 border border-[#8266ff] border-r-8 border-l-8 border-t-0 border-b-0 '>
+                            <div className='flex flex-col gap-10 items-center justify-center text-center px-3 h-[600px] sm:px-8 sm:mx-4 md:h-[350px] md:px-20 border border-[#8266ff] border-r-8 border-l-8 border-t-0 border-b-0 '>
                                 <div className='flex flex-col sm:flex-row items-center gap-4'>
                                     <Image
                                         src={testimonial.image}

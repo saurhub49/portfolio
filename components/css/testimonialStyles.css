@@ -1,7 +1,7 @@
 /* Default styles */
 .testimonial .swiper {
-    max-width: 1000px;
-    max-height: 500px;
+    max-width: 1100px;
+    height: 400px;
     margin: 0px;
 }
 
@@ -9,29 +9,38 @@
     width: fit-content;
     flex-shrink: 0;
     display: block;
+    margin-right: 0px;
 }
+
 .swiper-custom-pagination .swiper-pagination-bullet {
     display: flex;
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1200px) {
+    .testimonial .swiper {
+        max-width: 1000px;
+        height: 650px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .testimonial .swiper {
-        max-width: 400px;
-        max-height: 500px;
+        max-width: 650px;
+        height: 650px;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .testimonial .swiper {
-        max-width: 3600px;
-        max-height: 500px;
+        max-width: 500px;
+        height: 650px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .testimonial .swiper {
-        max-width: 320px;
-        max-height: 500px;
+        max-width: 350px;
+        height: 650px;
     }
 }
