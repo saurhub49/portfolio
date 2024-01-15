@@ -1,6 +1,7 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { Education, Experience, Hero, LinkType, Project, ProjectTag, Social, Technology, Testimonial } from "./types";
 import { akash, aws, bharati, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, manasi, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, prafull, python, reactjs, redux, s3, sppu, springboot, springframework, sujit, sunbeam, tailwind, typescript } from "./assets";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const links: LinkType[] = [
     {
@@ -55,6 +56,12 @@ export const socials: Social[] = [
         link: 'https://github.com/saurabhthecodewizard/',
         icon: FaGithub,
         iconColor: '#333'
+    },
+    {
+        name: 'X',
+        link: 'https://twitter.com/CodeWizSaurabh/',
+        icon: FaXTwitter,
+        iconColor: '#000000'
     },
     {
         name: 'Instagram',

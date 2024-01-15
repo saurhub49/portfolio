@@ -10,8 +10,10 @@ import Image from 'next/image';
 import { BiMenu, BiX } from 'react-icons/bi';
 import useActiveSectionContext from '@/context/useActiveSectionContext';
 import { useTheme } from '@/context/useTheme';
+import { useSectionInView } from './hooks/useSectionInView';
 
 const Navbar = () => {
+    const { ref } = useSectionInView('Home');
     const { theme, toggleTheme } = useTheme();
     const { activeSection, setActiveSection, setLastClick } = useActiveSectionContext();
     const [toggle, setToggle] = React.useState<boolean>(false);
@@ -45,8 +47,8 @@ const Navbar = () => {
     }, [onClickOutsideHandler]);
 
     return (
-        <nav className='z-[999] relative flex items-center justify-center'>
-            <div className={`fixed flex pt-28 lg:pt-36 gap-3 w-full justify-between items-center px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84`}>
+        <nav ref={ref} className='z-[999] relative flex items-center justify-center'>
+            <div className={`fixed flex pt-28 lg:pt-36 pb-4 lg:pb-8 gap-3 w-full justify-between items-center px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84 backdrop-blur-[3rem] lg:backdrop-blur-[0.3rem]`}>
                 <motion.div className='lg:flex items-center gap-2'
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
