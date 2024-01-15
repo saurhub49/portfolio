@@ -54,7 +54,7 @@ const Navbar = () => {
                     animate={{ x: 0, opacity: 1 }}
                 >
                     <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain" />
-                </motion.div> 
+                </motion.div>
 
                 <motion.div className='flex gap-3 h-[3.25rem] items-center'
                     initial={{ y: -100, opacity: 0 }}
@@ -69,8 +69,8 @@ const Navbar = () => {
                                         animate={{ y: 0, opacity: 1 }}
                                     >
                                         <motion.div
-                                            className={`flex w-full items-center justify-center px-3 py-2 my-1 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 
-                                        ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}
+                                            className={`flex w-full items-center justify-center px-3 py-2 my-1 transition 
+                                        ${activeSection === link.name ? ' text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 ' : ' hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300'}`}
                                             layoutId="activeSection"
                                             transition={{
                                                 type: 'spring',
@@ -90,7 +90,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <button
-                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] backdrop-blur-[0.1rem] sm:border sm:border-white sm:border-opacity-40 sm:bg-opacity-80 sm:shadow-2xl sm:shadow-black/[0.05] px-3 sm:dark:bg-gray-950 sm:dark:border-black/40 sm:dark:bg-opacity-70 rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all`}
+                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] backdrop-blur-[0.1rem] sm:border sm:border-white sm:border-opacity-40 sm:bg-opacity-80 sm:shadow-2xl sm:shadow-black/[0.05] px-3 sm:dark:bg-gray-950 sm:dark:border-black/40 sm:dark:bg-opacity-70 rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all dark:sm:hover:bg-[#8266ff]`}
                         onClick={toggleTheme}
                     >
                         {theme === "light" ? <BsSun /> : <BsMoon />}
@@ -102,7 +102,7 @@ const Navbar = () => {
 
                 <motion.div
                     ref={menuRef}
-                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 bg-white bg-opacity-95`}
+                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 border-white border-opacity-40 bg-opacity-80 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-90`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: toggle ? 1 : 0, scale: toggle ? 1 : 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -115,7 +115,7 @@ const Navbar = () => {
                                 transition={{ duration: 0.2, delay: 0.1 }}
                             >
                                 <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href} className={`px-3 py-2 hover:text-gray-950 transition 
-                                ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full' : ''}`}>
+                                ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}>
                                     {link.name}
                                 </Link>
                             </motion.li>

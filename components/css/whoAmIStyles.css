@@ -1,0 +1,15 @@
+.whoami .swiper {
+    width: 100%;
+}
+
+.whoami .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+}
+
+.whoami .swiper-slide img {
+    display: block;
+    width: 100%;
+}

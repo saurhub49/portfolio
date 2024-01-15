@@ -23,7 +23,7 @@ const Experience = () => {
                             <VerticalTimelineElement
                                 visible={true}
                                 contentStyle={{
-                                    backgroundColor: theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                                    backgroundColor: theme === "light" ? "#e2e8f0" : "rgba(255, 255, 255, 0.05)",
                                     border: '1px solid rgba(0, 0, 0, 0.05)',
                                     textAlign: 'left',
                                     padding: '1.3 rem 2rem'
