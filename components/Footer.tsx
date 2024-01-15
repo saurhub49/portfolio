@@ -11,7 +11,7 @@ const Footer = () => {
                     <h3 className='font-extrabold text-2xl'>
                         SAURABH MAHAJAN
                     </h3>
-                    <a className="underline text-xs -mt-1 mb-4" href="mailto:skmahajan4998@gmail.com">
+                    <a className="underline text-base -mt-1 mb-4" href="mailto:skmahajan4998@gmail.com">
                         skmahajan4998@gmail.com
                     </a>
                     <p className='text-xl italic'>
