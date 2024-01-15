@@ -7,9 +7,12 @@ import 'react-vertical-timeline-component/style.min.css';
 import { educations } from '@/lib/data';
 import { useSectionInView } from './hooks/useSectionInView';
 import TimelineIcon from './helpers/TimelineIcon';
+import { useTheme } from '@/context/useTheme';
 
 const Education = () => {
     const { ref } = useSectionInView('Education', 0.3);
+    const { theme } = useTheme();
+
     return (
         <section ref={ref}>
             <SectionHeader urlId='education' title='Education' description='Exploring My Educational Background' />
@@ -20,7 +23,7 @@ const Education = () => {
                             <VerticalTimelineElement
                                 visible={true}
                                 contentStyle={{
-                                    backgroundColor: '#f3f4f6',
+                                    backgroundColor: theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                                     border: '1px solid rgba(0, 0, 0, 0.05)',
                                     textAlign: 'left',
                                     padding: '1.3 rem 2rem'
@@ -31,7 +34,7 @@ const Education = () => {
                                 date={education.date}
                                 icon={<TimelineIcon src={education.icon} alt={education.university} />}
                                 iconStyle={{
-                                    background: education.iconBg,
+                                    background: theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                                     fontSize: '1.5rem',
                                     padding: '12px'
                                 }}

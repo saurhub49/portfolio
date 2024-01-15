@@ -9,20 +9,13 @@ import { name } from '@/lib/assets';
 import Image from 'next/image';
 import { BiMenu, BiX } from 'react-icons/bi';
 import useActiveSectionContext from '@/context/useActiveSectionContext';
+import { useTheme } from '@/context/useTheme';
 
 const Navbar = () => {
+    const { theme, toggleTheme } = useTheme();
     const { activeSection, setActiveSection, setLastClick } = useActiveSectionContext();
-    const [theme, setTheme] = React.useState("light");
     const [toggle, setToggle] = React.useState<boolean>(false);
     const menuRef = React.useRef<HTMLDivElement>(null);
-
-    const toggleTheme = React.useCallback(() => {
-        if (theme == "light") {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    }, [theme]);
 
     const onClickToggleHandler = React.useCallback(() => {
         setToggle(!toggle)
@@ -53,7 +46,7 @@ const Navbar = () => {
 
     return (
         <nav className='z-[999] relative flex items-center justify-center'>
-            <div className={`fixed flex pt-28 lg:pt-36 gap-3 w-full justify-between items-center bg-opacity-80 backdrop-blur-[0.5rem] px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84`}>
+            <div className={`fixed flex pt-28 lg:pt-36 gap-3 w-full justify-between items-center px-10 sm:px-16 md:px-28 lg:px-44 xl:px-60 2xl:px-84`}>
                 <motion.div className='lg:flex items-center gap-2'
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -65,7 +58,7 @@ const Navbar = () => {
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                 >
-                    <div className='lg:flex hidden top-[1.7rem h-[initial] rounded-full border border-white border-opacity-40 bg-white shadow-lg shadow-black/[0.05] px-3'>
+                    <div className='lg:flex hidden top-[1.7rem h-[initial] rounded-full border border-white border-opacity-40 bg-opacity-80 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-70'>
                         <ul className='flex flex-wrap items-center justify-center gap-1 text-[0.9rem] font-medium text-gray-500'>
                             {
                                 links.map((link) => (
@@ -74,8 +67,8 @@ const Navbar = () => {
                                         animate={{ y: 0, opacity: 1 }}
                                     >
                                         <motion.div
-                                            className={`flex w-full items-center justify-center px-3 py-2 my-1 hover:text-gray-950 transition 
-                                        ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full' : ''}`}
+                                            className={`flex w-full items-center justify-center px-3 py-2 my-1 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 
+                                        ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}
                                             layoutId="activeSection"
                                             transition={{
                                                 type: 'spring',
@@ -95,19 +88,19 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <button
-                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] bg-opacity-80 backdrop-blur-[0.5rem] sm:border sm:border-white sm:border-opacity-40 sm:shadow-2xl rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950`}
+                        className={`sm:bg-white sm:hover:bg-[#8266ff] w-[3.25rem] h-[3.25rem] backdrop-blur-[0.1rem] sm:border sm:border-white sm:border-opacity-40 sm:shadow-2xl rounded-full flex items-center justify-center justify-self-end hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950`}
                         onClick={toggleTheme}
                     >
                         {theme === "light" ? <BsSun /> : <BsMoon />}
                     </button>
                     {toggle
-                        ? <BiX onClick={onClickToggleHandler} className='w-10 h-10 cursor-pointer bg-opacity-80 backdrop-blur-[0.5rem] active:scale-105 transition-all lg:hidden' />
-                        : <BiMenu onClick={onClickToggleHandler} className='w-10 h-10 cursor-pointer bg-opacity-80 backdrop-blur-[0.5rem] active:scale-105 transition-all lg:hidden' />}
+                        ? <BiX onClick={onClickToggleHandler} className='w-10 h-10 cursor-pointer bg-opacity-75 backdrop-blur-[0.5rem] active:scale-105 transition-all lg:hidden' />
+                        : <BiMenu onClick={onClickToggleHandler} className='w-10 h-10 cursor-pointer bg-opacity-75 backdrop-blur-[0.5rem] active:scale-105 transition-all lg:hidden' />}
                 </motion.div>
 
                 <motion.div
                     ref={menuRef}
-                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 bg-white`}
+                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 bg-white bg-opacity-95`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: toggle ? 1 : 0, scale: toggle ? 1 : 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}

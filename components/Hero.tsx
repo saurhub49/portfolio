@@ -7,9 +7,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from './hooks/useSectionInView';
+import { useTheme } from '@/context/useTheme';
 
 const Hero = () => {
     const { ref } = useSectionInView('Home');
+    const { theme } = useTheme();
 
     return (
         <section ref={ref} className='text-center md:px-48'>
@@ -58,15 +60,15 @@ const Hero = () => {
                     delay: 0.1
                 }}
             >
-                <a download href='/resume.pdf' className='group bg-white flex items-center gap-2 rounded-full px-7 py-3 shadow-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer'>
+                <a download href='/resume.pdf' className='group bg-white flex items-center gap-2 rounded-full px-7 py-3 shadow-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'>
                     Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
                 </a>
                 <div className='flex flex-row gap-2 pt-2 sm:pt-0'>
                     {
                         socials.map((social) => (
-                            <a key={social.name} href={social.link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-md focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer'>
+                            <a key={social.name} href={social.link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-md focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 dark:bg-white/10 active:scale-105 transition cursor-pointer'>
                                 {React.createElement(social.icon, {
-                                    style: { width: '24px', height: '24px', color: social.iconColor }
+                                    style: { width: '24px', height: '24px', color: theme == 'light' ? social.iconColor : 'rgb(255 255 255 / 0.6)' }
                                 })}
                             </a>
                         ))

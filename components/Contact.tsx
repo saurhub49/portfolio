@@ -54,7 +54,7 @@ const Contact = () => {
                     toast.success("Email sent successfully!");
                 }}
             >
-                <label htmlFor="name" className="flex ml-2 mb-0.5 font-medium text-gray-700">
+                <label htmlFor="name" className="flex ml-2 mb-0.5 font-medium text-gray-500">
                     Name:
                 </label>
                 <input
@@ -67,7 +67,7 @@ const Contact = () => {
                     placeholder="Your name"
                 />
 
-                <label htmlFor="email" className="flex ml-2 mb-0.5 font-medium text-gray-700">
+                <label htmlFor="email" className="flex ml-2 mb-0.5 font-medium text-gray-500">
                     Email:
                 </label>
                 <input
@@ -81,7 +81,7 @@ const Contact = () => {
                 />
 
 
-                <label htmlFor="message" className="flex ml-2 mb-0.5 font-medium text-gray-700">
+                <label htmlFor="message" className="flex ml-2 mb-0.5 font-medium text-gray-500">
                     Message:
                 </label>
                 <textarea

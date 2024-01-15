@@ -3,11 +3,13 @@ import { Project } from '@/lib/types';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTheme } from '@/context/useTheme';
 
 type ProjectCardProps = Project;
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     const { name, description, image, tags, link, extraLink } = props;
+    const { theme } = useTheme();
     const ref = React.useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -31,38 +33,42 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                 />
             </div>
             <div className='flex flex-col items-center lg:items-start text-justify justify-center'>
-                <h3 className='capitalize text-2xl font-medium mb-4'>
-                    {name}
-                </h3>
+                <div className='flex flex-row justify-between items-center mb-4 w-full'>
+                    <h3 className='capitalize text-2xl font-medium'>
+                        {name}
+                    </h3>
+                    <div className='flex flex-wrap gap-3'>
+                        <a href={link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
+                            {React.createElement(BsGithub, {
+                                style: { width: '16px', height: '16px', color: theme == 'light' ? '#333' : 'rgb(255 255 255 / 0.6)' }
+                            })}
+                        </a>
+                        {extraLink &&
+                            <a href={extraLink} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
+                                {React.createElement(BsGithub, {
+                                    style: { width: '16px', height: '16px', color: theme == 'light' ? '#333' : 'rgb(255 255 255 / 0.6)' }
+                                })}
+                            </a>}
+                    </div>
+                </div>
                 <p className='mb-4'>
                     {description}
                 </p>
-                <div className='flex flex-wrap mb-3'>
+
+
+
+                <div className='flex flex-wrap mb-3 items-center justify-center lg:items-start lg:justify-start'>
                     {
                         tags.map((tag) => (
                             <div
                                 key={tag.name}
-                                className="inline-flex items-center border border-black w-fit rounded-full py-1 px-4 mr-2 mb-2 text-sm"
+                                className="items-center border border-black w-fit rounded-full py-1 px-4 mr-2 mb-2 text-sm dark:text-gray-950"
                                 style={{ background: tag.color }}
                             >
                                 <span className="text-center w-full">{tag.name}</span>
                             </div>
                         ))
                     }
-                </div>
-
-                <div className='flex flex-wrap gap-3'>
-                    <a href={link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer'>
-                        {React.createElement(BsGithub, {
-                            style: { width: '28px', height: '28px', color: '#333' }
-                        })}
-                    </a>
-                    {extraLink &&
-                        <a href={extraLink} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer'>
-                            {React.createElement(BsGithub, {
-                                style: { width: '28px', height: '28px', color: '#333' }
-                            })}
-                        </a>}
                 </div>
             </div>
         </motion.div>
