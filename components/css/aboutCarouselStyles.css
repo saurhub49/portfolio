@@ -1,6 +1,7 @@
 .about .swiper {
     width: 300px;
     height: 400px;
+    --swiper-theme-color: #8266ff;
 }
 
 .about .swiper-slide {

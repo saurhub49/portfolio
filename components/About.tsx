@@ -37,7 +37,22 @@ const About = () => {
     };
 
     return (
-        <section ref={ref} className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'>
+        <motion.section
+            ref={ref}
+            className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'
+            initial={{
+                opacity: 0,
+            }}
+            whileInView={{
+                opacity: 1,
+            }}
+            transition={{
+                duration: 2,
+            }}
+            viewport={{
+                once: true,
+            }}
+        >
             <SectionHeader urlId='about' title='About Me' description='Who I Am in a Nutshell' />
             <div className={`flex flex-col sm:flex-row items-center justify-between gap-5`}>
                 <motion.div
@@ -103,7 +118,7 @@ const About = () => {
                     </p>
                 </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

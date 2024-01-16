@@ -52,6 +52,10 @@ const Navbar = () => {
                 <motion.div className='lg:flex items-center gap-2'
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
+                    transition={{
+                        type: 'tween',
+                        duration: 0.5
+                    }}
                 >
                     <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain" />
                 </motion.div>
@@ -59,6 +63,10 @@ const Navbar = () => {
                 <motion.div className='flex gap-3 h-[3.25rem] items-center'
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        type: 'spring',
+                        duration: 0.5
+                    }}
                 >
                     <div className='lg:flex hidden top-[1.7rem h-[initial] rounded-full border border-white border-opacity-40 bg-opacity-80 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-70'>
                         <ul className='flex items-center justify-center gap-1 text-[0.9rem] font-medium text-gray-500'>
@@ -67,6 +75,10 @@ const Navbar = () => {
                                     <motion.li key={link.href} className={`h-3/4 flex items-center justify-center`}
                                         initial={{ y: -100, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            type: 'spring',
+                                            duration: 0.5
+                                        }}
                                     >
                                         <motion.div
                                             className={`flex w-full items-center justify-center px-3 py-2 my-1 transition 
@@ -75,7 +87,8 @@ const Navbar = () => {
                                             transition={{
                                                 type: 'spring',
                                                 stiffness: 380,
-                                                damping: 30
+                                                damping: 30,
+                                                duration: 0.5
                                             }}
                                         >
                                             <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href}>
@@ -112,7 +125,7 @@ const Navbar = () => {
                             <motion.li key={link.href} className='flex items-center justify-center w-full'
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 0.2, delay: 0.1 }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
                             >
                                 <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href} className={`px-3 py-2 hover:text-gray-950 transition 
                                 ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}>
