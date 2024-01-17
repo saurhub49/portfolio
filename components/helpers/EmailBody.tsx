@@ -10,7 +10,7 @@ import {
     Section,
     Text,
 } from "@react-email/components";
-import { Tailwind } from "@react-email/tailwind";
+import { Tailwind } from "@react-email/components";
 
 interface EmailBodyProps {
     name: string;
