@@ -7,11 +7,9 @@ import SectionHeader from '@/components/helpers/SectionHeader';
 import toast from 'react-hot-toast';
 import SubmitButton from '@/components/helpers/SubmitButton';
 import { sendEmail } from '@/actions/sendEmail';
-import { useFormStatus } from 'react-dom';
 
 const Contact = () => {
     const { ref } = useSectionInView("Contact");
-    const { pending } = useFormStatus();
 
     return (
         <motion.section
@@ -42,6 +40,7 @@ const Contact = () => {
             </p>
 
             <form
+                id='contact-form'
                 className="mt-10 flex flex-col dark:text-black"
                 action={async (formData) => {
                     const { data, error } = await sendEmail(formData);
@@ -50,6 +49,9 @@ const Contact = () => {
                         toast.error(error);
                         return;
                     }
+
+                    const form: HTMLFormElement = document.getElementById('contact-form') as HTMLFormElement;
+                    form?.reset();
 
                     toast.success("Email sent successfully!");
                 }}
