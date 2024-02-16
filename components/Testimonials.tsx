@@ -27,7 +27,7 @@ const Testimonials = () => {
         }
     };
     return (
-        <section ref={ref} className='mt-20 testimonial flex flex-col items-center justify-center'>
+        <section ref={ref} className='mt-32 testimonial flex flex-col items-center justify-center'>
             <SectionHeader urlId='testimonials' title='Testimonials' description='Endorsements, Testimonies and Words of Recommendation' />
             <motion.div
                 initial={{
@@ -67,7 +67,7 @@ const Testimonials = () => {
                     {
                         testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index}>
-                                <div className='flex flex-col gap-10 items-center justify-center text-center px-3 h-[600px] sm:px-8 sm:mx-4 md:h-[350px] md:px-20 border border-[#8266ff] border-r-8 border-l-8 border-t-0 border-b-0 '>
+                                <div className='flex flex-col gap-10 items-center justify-center text-center px-3 h-[600px] sm:px-8 sm:mx-4 sm:h-[400px] md:h-[350px] md:px-20 border border-[#8266ff] border-r-8 border-l-8 border-t-0 border-b-0 '>
                                     <div className='flex flex-col sm:flex-row items-center gap-4'>
                                         <Image
                                             src={testimonial.image}
@@ -95,7 +95,6 @@ const Testimonials = () => {
                         <span ref={progressContent}></span>
                     </div>
                 </Swiper>
-                {/* <div className="swiper-custom-pagination flex justify-center gap-2 mt-2" /> */}
             </motion.div>
 
         </section>

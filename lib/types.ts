@@ -37,6 +37,11 @@ export interface Technology {
     icon: StaticImageData;
 }
 
+export interface SkillCategory {
+    title: string;
+    technologies: Technology[];
+}
+
 export interface ProjectTag {
     name: string;
     color: string;
@@ -47,8 +52,9 @@ export interface Project {
     description: string;
     tags: ProjectTag[];
     image: StaticImageData;
-    link: string;
-    extraLink?: string;
+    link?: string;
+    repository: string;
+    extraRepository?: string;
 }
 
 export interface Education {
@@ -62,10 +68,28 @@ export interface Education {
     points: string[];
 }
 
+export interface WallPicture {
+    name: string;
+    description: string;
+    image: StaticImageData;
+}
+
 export interface Testimonial {
     testimonial: string;
     name: string;
     designation: string;
     company: string;
     image: StaticImageData;
+}
+
+export interface Post {
+    id: string;
+    url: string;
+    title: string;
+    coverImage: {
+        url: string
+    }
+    brief: string;
+    publishedAt: string;
+    readTimeInMinutes: number;
 }

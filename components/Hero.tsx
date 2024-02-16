@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { profile } from '@/lib/assets';
-import { heroData, socials } from '@/lib/data';
+import { heroData } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from './hooks/useSectionInView';
-import { useTheme } from '@/context/useTheme';
 import SocialMedia from './helpers/SocialMedia';
 
 const Hero = () => {

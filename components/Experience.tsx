@@ -16,7 +16,7 @@ const Experience = () => {
     const { theme } = useTheme();
 
     return (
-        <section ref={ref}>
+        <section ref={ref} className='mt-32'>
             <SectionHeader urlId='experience' title='Experience' description='My Professional Odyssey and Experience' />
             <motion.div
                 variants={fadeInAnimationVariants}

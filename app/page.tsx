@@ -2,10 +2,12 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
+import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Testimonials from "@/components/Testimonials";
+import Wall from "@/components/Wall";
 import SectionDivider from "@/components/helpers/SectionDivider";
 
 export default function Home() {
@@ -14,15 +16,13 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <About />
-      <SectionDivider />
       <Experience />
       <Skills />
-      <SectionDivider />
       <Projects />
-      <SectionDivider />
       <Education />
+      <Wall />
+      <Gallery />
       <Testimonials />
-      <SectionDivider />
       <Contact />
     </main>
   );

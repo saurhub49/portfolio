@@ -1,7 +1,7 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Education, Experience, Hero, LinkType, Project, ProjectTag, Social, Technology, Testimonial } from "./types";
-import { akash, aws, bharati, bootstrap, company, csharp, css, docker, dotnet, emeraldoasis, git, github, html, java, javascript, lambda, manasi, mui, mysql, nextjs, opus, portfolio, portfolio3d, postgresql, prafull, python, reactjs, redux, s3, sppu, springboot, springframework, sujit, sunbeam, tailwind, typescript } from "./assets";
-import { FaXTwitter } from "react-icons/fa6";
+import { Education, Experience, Hero, LinkType, Project, ProjectTag, SkillCategory, Social, Technology, Testimonial, WallPicture } from "./types";
+import { akash, aws, bharati, bootstrap, chief, company, csharp, css, docker, dockercompose, dotnet, emeraldoasis, git, github, githubactions, html, java, javascript, jira, manasi, mui, mysql, nextjs, office, opus, portfolio, portfolio3d, postgresql, prafull, python, rank, reactjs, redux, sponsorship, sppu, springboot, springframework, sujit, sunbeam, tailwind, team, techtonic, typescript } from "./assets";
+import { FaHashnode, FaXTwitter } from "react-icons/fa6";
 
 export const links: LinkType[] = [
     {
@@ -29,6 +29,10 @@ export const links: LinkType[] = [
         href: "#education",
     },
     {
+        name: "Wall",
+        href: "#wall",
+    },
+    {
         name: "Testimonials",
         href: "#testimonials",
     },
@@ -40,7 +44,7 @@ export const links: LinkType[] = [
 
 export const heroData: Hero = {
     name: 'Saurabh',
-    profession: 'Full-stack developer',
+    profession: 'Full Stack Software Engineer',
     tagLine: 'Building the future, one line of code at a time.'
 };
 
@@ -50,6 +54,12 @@ export const socials: Social[] = [
         link: 'https://www.linkedin.com/in/saurabh-mahajan-dev/',
         icon: FaLinkedin,
         iconColor: '#0077b5'
+    },
+    {
+        name: 'Hashnode',
+        link: 'https://blog.saurabhmahajan.com/',
+        icon: FaHashnode,
+        iconColor: '#007AFF'
     },
     {
         name: 'Github',
@@ -80,195 +90,149 @@ export const experiences: Experience[] = [
         iconBg: "#e9edf6",
         date: "July 2023 - Present",
         points: [
-            "Led the successful implementation of Multi-Factor Authentication (MFA) in Spring Framework with Java, enhancing user security via phone number and Microsoft Authenticator app, which resulted in a 30% reduction in unauthorised intrusion attempts.",
-            "Initiated an innovative login flow in React with Typescript supporting features like MFA, password expiration, and prevention of reuse.",
-            "Mentored and empowered new team members through comprehensive training in product, code, and technology practices for swift integration and impactful contributions to product advancement.",
-            "Demonstrated adaptability through a swift transition to a new project, with a driven mindset and delivering valuable contributions that accelerated the timeline by 15%.",
+            "Pioneering the integration of Multi-Factor Authentication (MFA) using the Spring Framework with Java, boosting security measures through phone verification and Microsoft Authenticator, and decreasing unauthorized access by 30%.",
+            "Facilitating seamless data management and storage solutions by integrating AWS S3 and an AWS Lambda-based data importer into a Spring application for MITRE, enhancing operational efficiency by 15%.",
+            "Revolutionizing a new login flow using React and TypeScript, incorporating MFA, password expiry, and reuse prevention features to elevate security and user experience.",
+            "Developing client admin functionality with controlled admin privileges to client users using PostgreSQL joins, views, and complex authorization scope handling in Java with Spring, complemented by its user management UI in React.",
+            "Providing mentorship to newly joined team members, empowering, and helping them through comprehensive training in product, code, and tech practices and ensuring their effective contribution to the project's advancement.",
+            "Demonstrating exceptional adaptability with cross-functional and globally dispersed teams by swiftly transitioning and excelling in a new project, contributing to a 15% faster project advancement.",
         ],
     },
     {
         id: 2,
-        title: "Associate Software Engineer",
+        title: "Associate Full Stack Engineer",
         companyName: "NetSPI",
         icon: company,
         iconBg: "#e9edf6",
         date: "May 2022 - June 2023",
         points: [
-            "Led the BAS (Breach and Attack Simulation) transition from a company-centric to an operation-centric focus, fostering collaboration through discussions with team members to optimize dashboards and APIs, resulting in a 25% improvement in detecting and mitigating potential security threats.",
-            "Liaised transparent communication channels during untested status implementation for detection control level, aligning efforts with teammates on operation-centered dashboards.",
-            "Cultivated a collaborative culture while working on features like MITRE Tag import with STIX models in C#, ensuring collective exploration of the best solutions, increasing team efficiency and problem-solving speed by 15%.",
-            "Coordinated the product reporting feature using the pdfmake library in React, with a unique JavaScript and Web workers solution, which reduced report generation time by 60%, showcasing both efficiency and creative problem-solving.",
-            "Implemented advanced filtering functionality for TTP Coverages with .NET Core, resulting in a 40% improvement in data analysis speed and accuracy, optimizing the platform for large-scale data processing.",
+            "Led the transformation of the Breach and Attack Simulation (BAS) application from a company-centric to a more operation-centric approach, and improved security threat detection and mitigation by 25% through enhanced dashboard and API optimization.",
+            "Fostered a collaborative team environment, and significantly improved problem-solving efficiency and team productivity by 15% through innovative feature development and efficient code practices while working on features like MITRE Software and Group import with the STIX model in C# as well as JAVA.",
+            "Engineered a novel product reporting feature utilising a PDF generation library in React and achieved a 60% reduction in report generation time with a unique JavaScript and Web workers solution.",
+            "Enhanced data filtering and analysis capabilities for TTP Coverages using .NET Core with a 40% increase in speed and accuracy for large-scale data processing.",
         ],
     },
 ];
 
-export const skills: Technology[] = [
+export const skillCategories: SkillCategory[] = [
     {
-        name: "Java",
-        icon: java,
-    },
-    {
-        name: "Python",
-        icon: python,
-    },
-    {
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
-    },
-    {
-        name: "TypeScript",
-        icon: typescript,
-    },
-    {
-        name: "C#",
-        icon: csharp,
-    },
-    {
-        name: "Spring Boot",
-        icon: springboot,
-    },
-    {
-        name: "Spring Framework",
-        icon: springframework,
-    },
-    {
-        name: ".NET Core",
-        icon: dotnet,
-    },
-    {
-        name: "MySQL",
-        icon: mysql,
-    },
-    {
-        name: "PostgreSQL",
-        icon: postgresql,
-    },
-    {
-        name: "React JS",
-        icon: reactjs,
-    },
-    {
-        name: "Next JS",
-        icon: nextjs,
-    },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-    },
-    {
-        name: "Git",
-        icon: git,
-    },
-    {
-        name: "Github",
-        icon: github,
-    },
-    {
-        name: "Material UI",
-        icon: mui,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
-    {
-        name: "Bootstrap",
-        icon: bootstrap,
-    },
-    {
-        name: "docker",
-        icon: docker,
-    },
-    {
-        name: "AWS",
-        icon: aws,
-    },
-    {
-        name: "AWS S3",
-        icon: s3,
-    },
-    {
-        name: "AWS Lambda",
-        icon: lambda,
-    }
-];
-
-export const projects: Project[] = [
-    {
-        name: "Portfolio",
-        description:
-            "The Portfolio Project serves as an extensive online platform crafted to highlight the expertise, projects, professional journey, and accomplishments of a software developer. This web application is meticulously designed to present a captivating and interactive display of the developer's skills and experiences. Functioning as a dynamic digital resume, the portfolio offers a unique space for the developer to showcase their career path, skills, and noteworthy achievements in a visually appealing manner.",
-        tags: [
+        title: 'Languages',
+        technologies: [
             {
-                name: "React",
-                color: "#60A5FA",
+                name: "Java",
+                icon: java,
             },
             {
-                name: "NextJS",
-                color: "#6EE7B7",
+                name: "Python",
+                icon: python,
             },
             {
-                name: "Typescript",
-                color: "#FCD34D",
+                name: "HTML 5",
+                icon: html,
             },
             {
-                name: "Tailwind",
-                color: "#A855F7",
-            },
-            {
-                name: "Framer",
-                color: "#FF7EB6",
-            },
-            {
-                name: "Swiper",
-                color: "#FED7AA",
-            },
-        ] as ProjectTag[],
-        image: portfolio,
-        link: "https://github.com/saurabhthecodewizard/portfolio",
-    },
-    {
-        name: "3d Portfolio",
-        description:
-            "The 3D Portfolio Project is an innovative web application that leverages cutting-edge 3D components to showcase a software developer's skills, projects, experiences, and achievements. This visually appealing and interactive portfolio serves as a dynamic digital resume, offering a unique platform for the developer to present their professional journey and accomplishments with a focus on the immersive 3D elements integrated throughout the project with the help of the three js library.",
-        tags: [
-            {
-                name: "React",
-                color: "#60A5FA",
-            },
-            {
-                name: "Tailwind",
-                color: "#6EE7B7",
+                name: "JavaScript",
+                icon: javascript,
             },
             {
                 name: "TypeScript",
-                color: "#FCD34D",
+                icon: typescript,
             },
             {
-                name: "ThreeJS",
-                color: "#A855F7",
+                name: "C#",
+                icon: csharp,
             },
             {
-                name: "Framer",
-                color: "#FF7EB6",
+                name: "MySQL",
+                icon: mysql,
             },
             {
-                name: "React-tilt",
-                color: "#FED7AA",
-            },
-        ] as ProjectTag[],
-        image: portfolio3d,
-        link: "https://github.com/saurabhthecodewizard/3d-portfolio-for-dev",
+                name: "PostgreSQL",
+                icon: postgresql,
+            }
+        ]
     },
+    {
+        title: 'Frameworks & Libraries',
+        technologies: [
+            {
+                name: "CSS 3",
+                icon: css,
+            },
+            {
+                name: "Spring Boot",
+                icon: springboot,
+            },
+            {
+                name: "Spring Framework",
+                icon: springframework,
+            },
+            {
+                name: ".NET Core",
+                icon: dotnet,
+            },
+            {
+                name: "React JS",
+                icon: reactjs,
+            },
+            {
+                name: "Next JS",
+                icon: nextjs,
+            },
+            {
+                name: "Redux Toolkit",
+                icon: redux,
+            },
+            {
+                name: "Material UI",
+                icon: mui,
+            },
+            {
+                name: "Tailwind CSS",
+                icon: tailwind,
+            },
+            {
+                name: "Bootstrap",
+                icon: bootstrap,
+            }
+        ]
+    },
+    {
+        title: 'Tools & Products',
+        technologies: [
+            {
+                name: "Git",
+                icon: git,
+            },
+            {
+                name: "GitHub",
+                icon: github,
+            },
+            {
+                name: "GitHub Actions",
+                icon: githubactions,
+            },
+            {
+                name: "Docker",
+                icon: docker,
+            },
+            {
+                name: "Docker Compose",
+                icon: dockercompose,
+            },
+            {
+                name: "AWS",
+                icon: aws,
+            },
+            {
+                name: "Jira",
+                icon: jira,
+            }
+        ]
+    }
+]
+
+export const projects: Project[] = [
     {
         name: "Opus",
         description:
@@ -310,10 +274,106 @@ export const projects: Project[] = [
                 name: "MUI",
                 color: "#FED7AA",
             },
+            {
+                name: "SMTP",
+                color: "#00ADD8 ",
+            },
+            {
+                name: "AWS",
+                color: "#68A063    ",
+            },
+            {
+                name: "CI/CD",
+                color: "#FF6F61   ",
+            },
         ] as ProjectTag[],
         image: opus,
-        link: "https://github.com/saurabhthecodewizard/opus-client",
-        extraLink: "https://github.com/saurabhthecodewizard/opus-server",
+        link: 'https://opus-verse.vercel.app/',
+        repository: "https://github.com/saurabhthecodewizard/opus"
+    },
+    {
+        name: "Portfolio",
+        description:
+            "The Portfolio Project serves as an extensive online platform crafted for personal branding and to highlight the expertise, projects, professional journey, and accomplishments of a user. This web application is meticulously designed to present a captivating and interactive display of the user's skills and experiences. Functioning as a dynamic digital resume, the portfolio offers a unique space for the user to showcase their career path, skills, and noteworthy achievements in a visually appealing manner.",
+        tags: [
+            {
+                name: "React",
+                color: "#60A5FA",
+            },
+            {
+                name: "NextJS",
+                color: "#6EE7B7",
+            },
+            {
+                name: "Typescript",
+                color: "#FCD34D",
+            },
+            {
+                name: "Tailwind",
+                color: "#A855F7",
+            },
+            {
+                name: "Framer",
+                color: "#FF7EB6",
+            },
+            {
+                name: "Swiper",
+                color: "#FB923C",
+            },
+            {
+                name: "Vercel",
+                color: "#A5F3EB",
+            },
+            {
+                name: "CI/CD",
+                color: "#D4A5A5",
+            },
+        ] as ProjectTag[],
+        image: portfolio,
+        link: 'https://portfolio.saurabhmahajan.com/',
+        repository: "https://github.com/saurabhthecodewizard/portfolio",
+    },
+    {
+        name: "3d Portfolio",
+        description:
+            "The 3D Portfolio Project is an innovative web application that leverages cutting-edge 3D components to showcase a software developer's skills, projects, experiences, and achievements. This visually appealing and interactive portfolio serves as a dynamic digital resume, offering a unique platform for the developer to present their professional journey and accomplishments with a focus on the immersive 3D elements integrated throughout the project with the help of the three js library.",
+        tags: [
+            {
+                name: "React",
+                color: "#60A5FA",
+            },
+            {
+                name: "Tailwind",
+                color: "#6EE7B7",
+            },
+            {
+                name: "TypeScript",
+                color: "#FCD34D",
+            },
+            {
+                name: "ThreeJS",
+                color: "#A855F7",
+            },
+            {
+                name: "Framer",
+                color: "#FF7EB6",
+            },
+            {
+                name: "React-tilt",
+                color: "#FB923C",
+            },
+            {
+                name: "Netlify",
+                color: "#A5F3EB",
+            },
+            {
+                name: "CI/CD",
+                color: "#D4A5A5",
+            },
+        ] as ProjectTag[],
+        image: portfolio3d,
+        link: 'https://saurabh-the-dev.netlify.app/',
+        repository: "https://github.com/saurabhthecodewizard/3d-portfolio-for-dev",
     },
     {
         name: "Emerald Oasis",
@@ -342,11 +402,11 @@ export const projects: Project[] = [
             },
             {
                 name: "Bootstrap",
-                color: "#FED7AA",
+                color: "#FB923C",
             },
         ] as ProjectTag[],
         image: emeraldoasis,
-        link: "https://github.com/saurabhthecodewizard/Emerald-Oasis",
+        repository: "https://github.com/saurabhthecodewizard/Emerald-Oasis",
     },
 ];
 
@@ -396,6 +456,39 @@ export const educations: Education[] = [
     }
 ];
 
+export const wallPictures: WallPicture[] = [
+    {
+        name: 'Rank',
+        description: "Felicitated by a goverment official for acquiring All India Rank 1 in the CDAC'S C-CAT 2021 section A+B and completed the PG-DAC course in April 2022 with A Grade. After the results, I was interviewed by a local news channel in the native language so as to motivate the local youth towards education and technology",
+        image: rank
+    },
+    {
+        name: 'Chief Guest',
+        description: ' Grateful for the opportunity to serve as the Chief Guest at Shree Swaminarayan English Medium School, Faizpur, where I had the privilege of engaging with bright minds from grades 6 to 12. It was inspiring to witness their curiosity and enthusiasm for technology.',
+        image: chief
+    },
+    {
+        name: 'Sponsorship',
+        description: 'In my bachelor final year, excelling as a Sponsorship Coordinator honed strategic thinking and coordination—now seamlessly applied in software development. Thriving on diverse experiences, I contribute to cutting-edge projects with unwavering commitment.',
+        image: sponsorship
+    },
+    {
+        name: 'Techtonic',
+        description: 'In my bachelor third year, assuming the role of Department Head honed my project management and organizational abilities, placing a strong emphasis on precision and attention to detail—qualities that seamlessly transitioned into my current role in software engineering. Leveraging this diverse skill set, I thrive in creating and managing impactful software solutions.',
+        image: techtonic
+    },
+    {
+        name: 'Office',
+        description: 'Fast faced Full-stack Software Engineer leading transformative tech initiatives and pushing the boundaries of digital innovation. Adept at bridging complex problems with solutions, I thrive on continuous learning, innovation, mentoring talents, and collaboration in the tech community.',
+        image: office
+    },
+    {
+        name: 'Team',
+        description: 'Versatile team player excelling in seamless collaboration both in-office and across geographically dispersed teams worldwide. Proficient in fostering open communication, bridging cultural gaps, and aligning efforts for coordinated success in our endeavors.',
+        image: team
+    }
+]
+
 export const testimonials: Testimonial[] = [
     {
         testimonial:
@@ -430,3 +523,5 @@ export const testimonials: Testimonial[] = [
         image: manasi,
     },
 ];
+
+export const blogLink = 'https://blog.saurabhmahajan.com/';

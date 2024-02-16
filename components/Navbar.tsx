@@ -57,7 +57,9 @@ const Navbar = () => {
                         duration: 0.5
                     }}
                 >
-                    <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain" />
+                    <Link href='#home'>
+                        <Image src={name} alt={'Saurabh Mahajan'} className="w-[18rem] object-contain cursor-pointer" />
+                    </Link>
                 </motion.div>
 
                 <motion.div className='flex gap-3 h-[3.25rem] items-center'
@@ -115,7 +117,7 @@ const Navbar = () => {
 
                 <motion.div
                     ref={menuRef}
-                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 border-white border-opacity-40 bg-opacity-80 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-90`}
+                    className={`${toggle ? 'block z-50' : 'hidden'} lg:hidden fixed mt-16 py-4 rounded-2xl self-start right-12 sm:right-16 md:right-28 max-h-[32rem] w-60 border-white border-opacity-40 bg-opacity-90 bg-white shadow-lg shadow-black/[0.05] px-3 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-90`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: toggle ? 1 : 0, scale: toggle ? 1 : 0.9 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -128,7 +130,7 @@ const Navbar = () => {
                                 transition={{ duration: 0.5, delay: 0.1 }}
                             >
                                 <Link aria-label={link.name} onClick={onClickLinkHandler} href={link.href} className={`px-3 py-2 hover:text-gray-950 transition 
-                                ${activeSection === link.name ? 'text-gray-950 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}>
+                                ${activeSection === link.name ? 'text-gray-950 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300' : ''}`}>
                                     {link.name}
                                 </Link>
                             </motion.li>

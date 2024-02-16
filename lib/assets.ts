@@ -16,13 +16,15 @@ import bootstrap from '@/public/skills/bootstrap.png';
 import csharp from '@/public/skills/csharp.png';
 import css from '@/public/skills/css.png';
 import docker from '@/public/skills/docker.png';
+import dockercompose from '@/public/skills/dockercompose.png'
 import dotnet from '@/public/skills/dotnet.png';
 import git from '@/public/skills/git.png';
 import github from '@/public/skills/github.png';
+import githubactions from '@/public/skills/githubactions.png'
 import html from '@/public/skills/html.png';
 import java from '@/public/skills/java.png';
 import javascript from '@/public/skills/javascript.png';
-import lambda from '@/public/skills/lambda.png';
+import jira from '@/public/skills/jira.png'
 import mui from '@/public/skills/mui.png';
 import mysql from '@/public/skills/mysql.png';
 import postgresql from '@/public/skills/postgresql.png';
@@ -30,7 +32,6 @@ import python from '@/public/skills/python.png';
 import reactjs from '@/public/skills/reactjs.png';
 import nextjs from '@/public/skills/nextjs.png';
 import redux from '@/public/skills/redux.png';
-import s3 from '@/public/skills/s3.png';
 import springboot from '@/public/skills/springboot.png';
 import springframework from '@/public/skills/springframework.png';
 import tailwind from '@/public/skills/tailwind.png';
@@ -44,6 +45,13 @@ import emeraldoasis from '@/public/projects/emerald-oasis.png';
 import sunbeam from '@/public/education/sunbeam.png';
 import sppu from '@/public/education/sppu.png';
 import bharati from '@/public/education/bharati.png';
+
+import rank from '@/public/wall/rank.jpg'
+import chief from '@/public/wall/chief.jpg'
+import sponsorship from '@/public/wall/sponsorship.jpg'
+import techtonic from '@/public/wall/techtonic.jpg'
+import office from '@/public/wall/office.jpg'
+import team from '@/public/wall/team.jpg'
 
 import prafull from '@/public/testimonials/prafull.png';
 import akash from '@/public/testimonials/akash.png';
@@ -69,13 +77,15 @@ export {
     csharp,
     css,
     docker,
+    dockercompose,
     dotnet,
     git,
     github,
+    githubactions,
     html,
     java,
     javascript,
-    lambda,
+    jira,
     mui,
     mysql,
     postgresql,
@@ -83,7 +93,6 @@ export {
     reactjs,
     nextjs,
     redux,
-    s3,
     springboot,
     springframework,
     tailwind,
@@ -97,6 +106,13 @@ export {
     sunbeam,
     sppu,
     bharati,
+
+    rank,
+    chief,
+    sponsorship,
+    techtonic,
+    office,
+    team,
 
     prafull,
     akash,

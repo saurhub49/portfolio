@@ -15,7 +15,7 @@ const Contact = () => {
         <motion.section
             id="contact"
             ref={ref}
-            className="mb-20 text-center"
+            className="mt-32 text-center"
             initial={{
                 opacity: 0,
             }}
@@ -33,8 +33,8 @@ const Contact = () => {
 
             <p className="text-gray-700 -mt-6 dark:text-white/80">
                 Please contact me directly at{" "}
-                <a className="underline" href="mailto:skmahajan4998@gmail.com">
-                    skmahajan4998@gmail.com
+                <a className="underline" href="mailto:saurabhmahajan854@gmail.com">
+                saurabhmahajan854@gmail.com
                 </a>{" "}
                 or through this form.
             </p>

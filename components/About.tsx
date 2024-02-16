@@ -39,7 +39,7 @@ const About = () => {
     return (
         <motion.section
             ref={ref}
-            className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48'
+            className='flex flex-col items-center justify-center md:px-24 lg:px-36 xl:px-48 mt-32'
             initial={{
                 opacity: 0,
             }}
@@ -82,7 +82,7 @@ const About = () => {
                     >
                         {images.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <Image alt="lol" src={image} />
+                                <Image alt="Saurabh" src={image} />
                             </SwiperSlide>
                         ))}
                     </Swiper>

@@ -16,7 +16,7 @@ const Education = () => {
     const { theme } = useTheme();
 
     return (
-        <section ref={ref}>
+        <section ref={ref} className='mt-32'>
             <SectionHeader urlId='education' title='Education' description='Exploring My Educational Background' />
             <motion.div
                 variants={fadeInAnimationVariants}

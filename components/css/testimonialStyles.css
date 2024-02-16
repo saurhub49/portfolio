@@ -67,11 +67,19 @@
         max-width: 500px;
         height: 650px;
     }
+
+    .testimonial .autoplay-progress {
+        right: 8px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .testimonial .swiper {
         max-width: 350px;
         height: 650px;
+    }
+
+    .testimonial .autoplay-progress {
+        right: 8px;
     }
 }

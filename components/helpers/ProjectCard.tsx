@@ -1,14 +1,14 @@
 import React from 'react';
 import { Project } from '@/lib/types';
 import Image from 'next/image';
-import { BsGithub } from 'react-icons/bs';
+import { BsDisplay, BsGithub } from 'react-icons/bs';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTheme } from '@/context/useTheme';
 
 type ProjectCardProps = Project;
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
-    const { name, description, image, tags, link, extraLink } = props;
+    const { name, description, image, tags, link, repository, extraRepository } = props;
     const { theme } = useTheme();
     const ref = React.useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -38,13 +38,19 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         {name}
                     </h3>
                     <div className='flex flex-wrap gap-3'>
-                        <a href={link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
+                        {link &&
+                            <a href={link} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
+                                {React.createElement(BsDisplay, {
+                                    style: { width: '16px', height: '16px', color: theme == 'light' ? '#333' : 'rgb(255 255 255 / 0.6)' }
+                                })}
+                            </a>}
+                        <a href={repository} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
                             {React.createElement(BsGithub, {
                                 style: { width: '16px', height: '16px', color: theme == 'light' ? '#333' : 'rgb(255 255 255 / 0.6)' }
                             })}
                         </a>
-                        {extraLink &&
-                            <a href={extraLink} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
+                        {extraRepository &&
+                            <a href={extraRepository} target='_blank' className='bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full shadow-lg border border-black/10 focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer dark:bg-white/10'>
                                 {React.createElement(BsGithub, {
                                     style: { width: '16px', height: '16px', color: theme == 'light' ? '#333' : 'rgb(255 255 255 / 0.6)' }
                                 })}

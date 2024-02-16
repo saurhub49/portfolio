@@ -12,7 +12,7 @@ const Projects = () => {
     return (
         <motion.section
             ref={ref}
-            className='flex flex-col gap-10'
+            className='flex flex-col gap-10 mt-32'
             initial={{
                 opacity: 0,
             }}
