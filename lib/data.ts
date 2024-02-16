@@ -1,5 +1,5 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { Education, Experience, Hero, LinkType, Project, ProjectTag, SkillCategory, Social, Technology, Testimonial, WallPicture } from "./types";
+import { Education, Experience, Hero, LinkType, Post, Project, ProjectTag, SkillCategory, Social, Technology, Testimonial, WallPicture } from "./types";
 import { akash, aws, bharati, bootstrap, chief, company, csharp, css, docker, dockercompose, dotnet, emeraldoasis, git, github, githubactions, html, java, javascript, jira, manasi, mui, mysql, nextjs, office, opus, portfolio, portfolio3d, postgresql, prafull, python, rank, reactjs, redux, sponsorship, sppu, springboot, springframework, sujit, sunbeam, tailwind, team, techtonic, typescript } from "./assets";
 import { FaHashnode, FaXTwitter } from "react-icons/fa6";
 
@@ -456,6 +456,31 @@ export const educations: Education[] = [
     }
 ];
 
+export const blogs: Post[] = [
+    {
+        "id": "65cd1e2229935acc57e4e4b6",
+        "url": "https://blog.saurabhmahajan.com/dockerizing-a-fullstack-application-crafted-in-mysql-spring-boot-react-with-docker-compose",
+        "title": "Dockerizing a Fullstack Application crafted in MySQL, Spring Boot & React with Docker Compose",
+        "coverImage": {
+            "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1706115113114/727a9d78-9507-4b47-8c1d-8a260ea96abb.png"
+        },
+        "brief": "Welcome to the core of modern development practices, where Docker Compose orchestrates a symphony for your fullstack app. As a dynamic Fullstack Software Engineer, you grasp the pivotal role containerization plays in shaping software development.\nThi...",
+        "publishedAt": "2024-02-14T20:10:10.459Z",
+        "readTimeInMinutes": 12
+    },
+    {
+        "id": "65be4868e2445c08eb35dde4",
+        "url": "https://blog.saurabhmahajan.com/navigating-the-coding-odyssey-my-100daysofcode-challenge-journey",
+        "title": "Navigating the Coding Odyssey: My 100DaysOfCode Challenge Journey",
+        "coverImage": {
+            "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1706466884968/d7d80bc0-0384-4618-9d07-d906e3ed701c.png"
+        },
+        "brief": "Embarking on a journey of self-improvement was a path often paved with challenges, victories, and the relentless pursuit of growth. In the realm of coding, this journey took the form of the 100DaysOfCode challenge - a commitment to spend a dedicated ...",
+        "publishedAt": "2024-02-03T14:06:32.546Z",
+        "readTimeInMinutes": 14
+    }
+]
+
 export const wallPictures: WallPicture[] = [
     {
         name: 'Rank',
@@ -487,7 +512,7 @@ export const wallPictures: WallPicture[] = [
         description: 'Versatile team player excelling in seamless collaboration both in-office and across geographically dispersed teams worldwide. Proficient in fostering open communication, bridging cultural gaps, and aligning efforts for coordinated success in our endeavors.',
         image: team
     }
-]
+];
 
 export const testimonials: Testimonial[] = [
     {
