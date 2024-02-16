@@ -488,16 +488,6 @@ export const wallPictures: WallPicture[] = [
         image: rank
     },
     {
-        name: 'Chief Guest',
-        description: ' Grateful for the opportunity to serve as the Chief Guest at Shree Swaminarayan English Medium School, Faizpur, where I had the privilege of engaging with bright minds from grades 6 to 12. It was inspiring to witness their curiosity and enthusiasm for technology.',
-        image: chief
-    },
-    {
-        name: 'Sponsorship',
-        description: 'In my bachelor final year, excelling as a Sponsorship Coordinator honed strategic thinking and coordination—now seamlessly applied in software development. Thriving on diverse experiences, I contribute to cutting-edge projects with unwavering commitment.',
-        image: sponsorship
-    },
-    {
         name: 'Techtonic',
         description: 'In my bachelor third year, assuming the role of Department Head honed my project management and organizational abilities, placing a strong emphasis on precision and attention to detail—qualities that seamlessly transitioned into my current role in software engineering. Leveraging this diverse skill set, I thrive in creating and managing impactful software solutions.',
         image: techtonic
@@ -506,6 +496,16 @@ export const wallPictures: WallPicture[] = [
         name: 'Office',
         description: 'Fast faced Full-stack Software Engineer leading transformative tech initiatives and pushing the boundaries of digital innovation. Adept at bridging complex problems with solutions, I thrive on continuous learning, innovation, mentoring talents, and collaboration in the tech community.',
         image: office
+    },
+    {
+        name: 'Chief Guest',
+        description: ' Grateful for the opportunity to serve as the Chief Guest at Shree Swaminarayan English Medium School, Faizpur, where I had the privilege of engaging with bright minds from grades 6 to 12. It was inspiring to witness their curiosity and enthusiasm for technology.',
+        image: chief
+    },
+    {
+        name: 'Sponsorship',
+        description: 'In my bachelor final year, excelling as a Sponsorship Coordinator honed strategic thinking and coordination—now seamlessly applied in software development. Thriving on diverse experiences, I contribute to cutting-edge projects with unwavering commitment.',
+        image: sponsorship
     },
     {
         name: 'Team',

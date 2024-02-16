@@ -42,7 +42,7 @@ const Wall = () => {
                                         style={{ width: '700px', height: 'auto' }}
                                     />
                                 </a>
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{blog.title}</h5>
+                                <h5 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{blog.title}</h5>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 hidden 2xl:block">{blog.brief}</p>
                                 <a href={blog.url} target="_blank" className="inline-flex w-fit self-end gap-1 items-center px-3 py-2 bg-white sm:hover:bg-[#8266ff] bg-opacity-80 backdrop-blur-[0.5rem] border border-black/10 border-opacity-40 shadow-2xl rounded-full justify-center hover:scale-[1.10] active:scale-105 transition-all dark:bg-gray-950">
                                     Read more

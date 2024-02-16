@@ -16,27 +16,26 @@ const Gallery = () => {
                 duration: 0.2
             }}
         >
-            <div className='gallery'>
-                {
-                    wallPictures.map((wallPicture) => (
-                        <div key={wallPicture.name} className='pics-container'>
-                            <div className='pics'>
-                                <Image
-                                    src={wallPicture.image}
-                                    alt={wallPicture.name}
-                                    width={0}
-                                    height={0}
-                                    style={{ height: 'auto', width: '100%' }}
-                                />
-                                <div className='overlay text-gray-950 dark:text-white'>
-                                    <p className='px-5'>
-                                        {wallPicture.description}
-                                    </p>
-                                </div>
-                            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {wallPictures.map((wallPicture) => (
+                    <div key={wallPicture.name} className="relative group overflow-hidden rounded-lg">
+                        <div className="aspect-w-4 aspect-h-3">
+                            <Image
+                                src={wallPicture.image}
+                                alt={`Image ${wallPicture.name}`}
+                                height={0}
+                                width={0}
+                                style={{ width: '500px', height: 'auto' }}
+                                className="transition-opacity group-hover:opacity-80 group-active:opacity-80"
+                            />
                         </div>
-                    ))
-                }
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-70 group-active:bg-opacity-70 transition-opacity">
+                            <p className="hidden group-hover:flex group-active:flex text-white text-center text-wrap p-4 max-w-full overflow-hidden">
+                                {wallPicture.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </motion.div>
     )
