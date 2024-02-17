@@ -1,4 +1,4 @@
-import profile from '@/public/profile.jpeg';
+import profile from '@/public/profile.jpg';
 
 import name from '@/public/name.png';
 

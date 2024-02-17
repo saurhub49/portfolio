@@ -420,7 +420,7 @@ export const educations: Education[] = [
         icon: sunbeam,
         iconBg: '#FAF9F6',
         points: [
-            'Honored to possess a PG Diploma in Advanced Computing and securing All India Rank 1 in the CCAT entrance exam.',
+            'Honored to secure All India Rank 1 in the CCAT entrance exam and possess a PG Diploma in Advanced Computing with Grade A.',
             'The diverse syllabus covered critical subjects such as OS, Software Development Methodologies, OOP, DSA, Database Technologies, Web-based Java Programming, Web Programming, and .NET, shaping my skill set.',
             'Led restaurant management website project, guiding team to develop a robust solution using Spring, React, and MySQL, showcasing technical acumen and effective leadership.',
             'Top-ranking academic excellence combined with practical project leadership provides a versatile skill set for tackling complex challenges in software development.',
