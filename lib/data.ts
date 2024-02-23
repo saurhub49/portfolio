@@ -94,8 +94,8 @@ export const experiences: Experience[] = [
             "Facilitating seamless data management and storage solutions by integrating AWS S3 and an AWS Lambda-based data importer into a Spring application for MITRE, enhancing operational efficiency by 15%.",
             "Revolutionizing a new login flow using React and TypeScript, incorporating MFA, password expiry, and reuse prevention features to elevate security and user experience.",
             "Developing client admin functionality with controlled admin privileges to client users using PostgreSQL joins, views, and complex authorization scope handling in Java with Spring, complemented by its user management UI in React.",
+            "Played a key role in developing a microservices-based architecture utilizing Docker containers, resulting in a 30% improvement in deployment efficiency and a significant increase in overall system scalability.",
             "Providing mentorship to newly joined team members, empowering, and helping them through comprehensive training in product, code, and tech practices and ensuring their effective contribution to the project's advancement.",
-            "Demonstrating exceptional adaptability with cross-functional and globally dispersed teams by swiftly transitioning and excelling in a new project, contributing to a 15% faster project advancement.",
         ],
     },
     {
@@ -110,6 +110,7 @@ export const experiences: Experience[] = [
             "Fostered a collaborative team environment, and significantly improved problem-solving efficiency and team productivity by 15% through innovative feature development and efficient code practices while working on features like MITRE Software and Group import with the STIX model in C# as well as JAVA.",
             "Engineered a novel product reporting feature utilising a PDF generation library in React and achieved a 60% reduction in report generation time with a unique JavaScript and Web workers solution.",
             "Enhanced data filtering and analysis capabilities for TTP Coverages using .NET Core with a 40% increase in speed and accuracy for large-scale data processing.",
+            "Demonstrating exceptional adaptability with cross-functional and globally dispersed teams by swiftly transitioning and excelling in a new project, contributing to a 15% faster project advancement."
         ],
     },
 ];
@@ -504,7 +505,7 @@ export const wallPictures: WallPicture[] = [
     },
     {
         name: 'Sponsorship',
-        description: 'In my bachelor final year, excelling as a Sponsorship Coordinator honed strategic thinking and coordination—now seamlessly applied in software development. Thriving on diverse experiences, I contribute to cutting-edge projects with unwavering commitment.',
+        description: 'In my bachelor final year, excelling as a Sponsorship Coordinator honed strategic thinking and coordination which is seamlessly applied in software development. Thriving on diverse experiences, I contribute to cutting-edge projects with unwavering commitment.',
         image: sponsorship
     },
     {
