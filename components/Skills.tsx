@@ -7,7 +7,6 @@ import { skillCategories } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInAnimationVariants } from '@/lib/styles';
-import { Tilt } from 'react-tilt';
 
 const Skills = () => {
     const { ref } = useSectionInView('Skills');
@@ -33,21 +32,17 @@ const Skills = () => {
                                         custom={index}
                                         className='flex flex-col items-center justify-center gap-3 mt-3'
                                     >
-                                        <Tilt>
-                                            <Image
-                                                className='focus:scale-125 hover:scale-125 active:scale-110 transition'
-                                                height={0}
-                                                width={0}
-                                                alt={skill.name}
-                                                src={skill.icon}
-                                                style={{ width: 'auto', height: "80px" }}
-                                            />
-                                        </Tilt>
-                                        <Tilt>
-                                            <p className="flex items-center justify-center px-2 py-1 bg-white bg-opacity-80 border border-black/10 border-opacity-40 shadow-2xl rounded-3xl hover:scale-[1.10] active:scale-105 transition-all dark:bg-gray-950 min-w-24 max-w-28 text-center text-wrap cursor-default">
-                                                {skill.name}
-                                            </p>
-                                        </Tilt>
+                                        <Image
+                                            className='focus:scale-125 hover:scale-125 active:scale-110 transition'
+                                            height={0}
+                                            width={0}
+                                            alt={skill.name}
+                                            src={skill.icon}
+                                            style={{ width: 'auto', height: "80px" }}
+                                        />
+                                        <p className="flex items-center justify-center px-2 py-1 bg-white bg-opacity-80 border border-black/10 border-opacity-40 shadow-2xl rounded-3xl hover:scale-[1.10] active:scale-105 transition-all dark:bg-gray-950 min-w-24 max-w-28 text-center text-wrap cursor-default">
+                                            {skill.name}
+                                        </p>
                                     </motion.div>
                                 ))
                             }
