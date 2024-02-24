@@ -222,12 +222,12 @@ export const skillCategories: SkillCategory[] = [
                 icon: dockercompose,
             },
             {
-                name: "AWS",
-                icon: aws,
-            },
-            {
                 name: "Jira",
                 icon: jira,
+            },
+            {
+                name: "AWS",
+                icon: aws,
             }
         ]
     }

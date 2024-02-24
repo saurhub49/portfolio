@@ -40,7 +40,7 @@ const Hero = () => {
             >
                 <div>
                     <div>
-                        <span className="font-bold text-5xl font-mono">Hi, I{`'`}m {heroData.name},</span>
+                        <span className="font-bold text-5xl font-mono">Hi, I{`'`}m {heroData.name}.</span>
                     </div>
                     <div>
                         <span className="font-medium font-mono">I am a {heroData.profession}.</span>
