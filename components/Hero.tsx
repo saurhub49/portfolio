@@ -59,7 +59,7 @@ const Hero = () => {
                     delay: 0.1
                 }}
             >
-                <a download href='/SaurabhMahajanResume.pdf' className='group bg-white flex items-center gap-2 rounded-full px-7 py-3 shadow-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-600'>
+                <a download href='/Saurabh_Mahajan_Resume.pdf' className='group bg-white flex items-center gap-2 rounded-full px-7 py-3 shadow-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-600'>
                     Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
                 </a>
                 <SocialMedia />

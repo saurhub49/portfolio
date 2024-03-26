@@ -51,7 +51,19 @@ const Experience = () => {
                                     }}
                                 >
                                     <motion.div
-                                        variants={fadeInAnimationVariants}
+                                        variants={{
+                                            initial: {
+                                                opacity: 0,
+                                                x: index % 2 === 0 ? 50 : -50,
+                                            },
+                                            animate: (index: number) => ({
+                                                opacity: 1,
+                                                x: 0,
+                                                transition: {
+                                                    delay: 0.05 * index,
+                                                },
+                                            }),
+                                        }}
                                         initial="initial"
                                         whileInView="animate"
                                         viewport={{

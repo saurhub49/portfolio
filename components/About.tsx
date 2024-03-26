@@ -98,7 +98,7 @@ const About = () => {
                 >
                     <p>
                         Greetings! 🚀 I{`'`}m a dynamic{' '}<span className='font-bold'>Fullstack Software Engineer</span>, driving advancements in technology to empower organizations globally.
-                        Proficient in a diverse tech stack including{' '}<span className='font-medium italic'>Java, Spring Framework, PostgresSQL, JavaScript, TypeScript, React, C#, .NET, Material-UI, Tailwind, Redux</span>, and more,
+                        Proficient in a diverse tech stack including{' '}<span className='font-medium italic'>Java, Spring Framework, Node.js, Express, MySQL, PostgresSQL, MongoDB, JavaScript, TypeScript, React, Next,js, C#, .NET, Material-UI, Tailwind, Redux</span>, and more,
                         I contribute to the architecture and development of high-performance applications.
                     </p>
                     <p>

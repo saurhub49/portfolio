@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { Education, Experience, Hero, LinkType, Post, Project, ProjectTag, SkillCategory, Social, Technology, Testimonial, WallPicture } from "./types";
-import { akash, aws, bharati, bootstrap, chief, company, csharp, css, docker, dockercompose, dotnet, emeraldoasis, git, github, githubactions, html, java, javascript, jira, manasi, mui, mysql, nextjs, office, opus, portfolio, portfolio3d, postgresql, prafull, python, rank, reactjs, redux, sponsorship, sppu, springboot, springframework, sujit, sunbeam, tailwind, team, techtonic, typescript } from "./assets";
+import { acadia, akash, aws, bharati, bootstrap, chief, company, csharp, css, docker, dockercompose, dotnet, emeraldoasis, expressjs, git, github, githubactions, html, java, javascript, jira, manasi, mongo, mui, mysql, nextjs, nodejs, office, opus, portfolio, portfolio3d, postgresql, prafull, python, rank, reactjs, redux, sponsorship, sppu, springboot, springframework, sujit, sunbeam, tailwind, team, techtonic, typescript } from "./assets";
 import { FaHashnode, FaXTwitter } from "react-icons/fa6";
 
 export const links: LinkType[] = [
@@ -90,12 +90,15 @@ export const experiences: Experience[] = [
         iconBg: "#e9edf6",
         date: "July 2023 - Present",
         points: [
-            "Pioneering the integration of Multi-Factor Authentication (MFA) using the Spring Framework with Java, boosting security measures through phone verification and Microsoft Authenticator, and decreasing unauthorized access by 30%.",
-            "Facilitating seamless data management and storage solutions by integrating AWS S3 and an AWS Lambda-based data importer into a Spring application for MITRE, enhancing operational efficiency by 15%.",
-            "Revolutionizing a new login flow using React and TypeScript, incorporating MFA, password expiry, and reuse prevention features to elevate security and user experience.",
-            "Developing client admin functionality with controlled admin privileges to client users using PostgreSQL joins, views, and complex authorization scope handling in Java with Spring, complemented by its user management UI in React.",
-            "Played a key role in developing a microservices-based architecture utilizing Docker containers, resulting in a 30% improvement in deployment efficiency and a significant increase in overall system scalability.",
-            "Providing mentorship to newly joined team members, empowering, and helping them through comprehensive training in product, code, and tech practices and ensuring their effective contribution to the project's advancement.",
+            "Spearheaded the migration of Breach & Attack Simulation (BAS) SaaS Platform from .NET & MS-SQL backend to Spring & PostgreSQL backend, yielding efficient resource management & slashing infrastructure costs by 30%.",
+            "Developed client admin functionality with controlled admin privileges to client users using PostgreSQL joins, views, & complex authorization scope handling in Java with Spring, complemented by its user management UI in React.",
+            "Crafted various modules of Async Job Framework in Spring, facilitating efficient management of bulk operations asynchronously with live updates of the job on the UI, resulting in 20% improvement in user engagement & experience.",
+            "Introduced an AWS Lambda-based data importer into a Spring application for MITRE, effectively harnessing the scalability and cost-efficiency of serverless computing, resulting in a 15% enhancement in operational efficiency.",
+            "Integrated AWS S3 in a SaaS platform, facilitating storage & management of over 50,000 images & files, alongside implementing an image compression feature cutting image sizes by 60%, enhancing performance and user experience.",
+            "Played a key role in developing a microservices-based architecture utilizing Docker containers, resulting in a 30% improvement in deployment efficiency & a significant increase in overall system scalability.",
+            "Crafted an in-product reporting framework facilitating dynamic PDF generation with support for images, tables, and styles, seamlessly integrating Highcharts for dynamic chart generation, and engineered a JavaScript and Web workers solution to optimize the PDF downloading by 95% on the background thread.",
+            "Designed & developed a cutting-edge generic file generation framework for generating PDF & CSV files for diverse entities capable of handling 100k+ records with optimal processing time.",
+            "Delivered mentorship to newly joined team members, empowering, & helping them through comprehensive training in product, code, & tech practices & ensuring their effective contribution to the project's advancement.",
         ],
     },
     {
@@ -106,11 +109,12 @@ export const experiences: Experience[] = [
         iconBg: "#e9edf6",
         date: "May 2022 - June 2023",
         points: [
-            "Led the transformation of the Breach and Attack Simulation (BAS) application from a company-centric to a more operation-centric approach, and improved security threat detection and mitigation by 25% through enhanced dashboard and API optimization.",
-            "Fostered a collaborative team environment, and significantly improved problem-solving efficiency and team productivity by 15% through innovative feature development and efficient code practices while working on features like MITRE Software and Group import with the STIX model in C# as well as JAVA.",
-            "Engineered a novel product reporting feature utilising a PDF generation library in React and achieved a 60% reduction in report generation time with a unique JavaScript and Web workers solution.",
-            "Enhanced data filtering and analysis capabilities for TTP Coverages using .NET Core with a 40% increase in speed and accuracy for large-scale data processing.",
-            "Demonstrating exceptional adaptability with cross-functional and globally dispersed teams by swiftly transitioning and excelling in a new project, contributing to a 15% faster project advancement."
+            "Pioneered the integration of Multi-Factor Authentication (MFA) using the Spring Framework with Java, boosting security measures through phone verification & Microsoft Authenticator, & decreasing unauthorized access by 30%.",
+            "Revolutionized a new login flow using React & TypeScript, incorporating MFA, password expiry, & reuse prevention features to elevate security & user experience.",
+            "Led the transformation of Breach & Attack Simulation (BAS) SaaS Platform from company-centric to operation-centric approach, & improved security threat detection & mitigation by 25% through enhanced dashboard & optimized the APIs by 20%.",
+            "Implemented the MITRE Software & Group import in BAS by leveraging the STIX models in C# & Java, driving the enhancement & alignment of the product with industry standards.",
+            "Enhanced data filtering & analysis capabilities for TTP Coverages using .NET Core with a 40% increase in speed & accuracy for large-scale data processing.",
+            "Exhibited exceptional adaptability in swiftly transitioning & excelling in multiple Saas products, resulting in a 15% faster organisation advancement through effective collaboration with cross-functional & globally dispersed teams."
         ],
     },
 ];
@@ -150,6 +154,10 @@ export const skillCategories: SkillCategory[] = [
             {
                 name: "PostgreSQL",
                 icon: postgresql,
+            },
+            {
+                name: "Mongo",
+                icon: mongo,
             }
         ]
     },
@@ -171,6 +179,14 @@ export const skillCategories: SkillCategory[] = [
             {
                 name: ".NET Core",
                 icon: dotnet,
+            },
+            {
+                name: "Node.js",
+                icon: nodejs,
+            },
+            {
+                name: "Express",
+                icon: expressjs,
             },
             {
                 name: "React JS",
@@ -289,8 +305,65 @@ export const projects: Project[] = [
             },
         ] as ProjectTag[],
         image: opus,
-        link: 'https://opus-verse.vercel.app/',
         repository: "https://github.com/saurabhthecodewizard/opus"
+    },
+    {
+        name: "Acadia",
+        description:
+            "Learning Management System (LMS) tailored to meet the specific needs of educational institutions, facilitating seamless administration, tracking, and delivery of educational content. With a user-friendly interface and robust features such as content management, assessment tools, and analytics, the platform optimizes the learning journey, fostering collaboration and enhancing educational outcomes.",
+                    tags: [
+            {
+                name: "JavaScript",
+                color: "#60A5FA",
+            },
+            {
+                name: "Node.js",
+                color: "#6EE7B7",
+            },
+            {
+                name: "Express",
+                color: "#FCD34D",
+            },
+            {
+                name: "MongoDB",
+                color: "#A855F7",
+            },
+            {
+                name: "Typescript",
+                color: "#FF7EB6",
+            },
+            {
+                name: "Cron",
+                color: "#FB923C",
+            },
+            {
+                name: "React",
+                color: "#A5F3EB",
+            },
+            {
+                name: "Next.js",
+                color: "#D4A5A5",
+            },
+            {
+                name: "MUI",
+                color: "#FED7AA",
+            },
+            {
+                name: "OAuth2",
+                color: "#00ADD8 ",
+            },
+            {
+                name: "Razorpay",
+                color: "#68A063    ",
+            },
+            {
+                name: "Websocket",
+                color: "#FF6F61   ",
+            },
+        ] as ProjectTag[],
+        image: acadia,
+        link: 'https://acadia-lms.vercel.app/',
+        repository: "https://github.com/saurabhthecodewizard/lms"
     },
     {
         name: "Portfolio",
@@ -459,15 +532,15 @@ export const educations: Education[] = [
 
 export const blogs: Post[] = [
     {
-        "id": "65cd1e2229935acc57e4e4b6",
-        "url": "https://blog.saurabhmahajan.com/dockerizing-a-fullstack-application-crafted-in-mysql-spring-boot-react-with-docker-compose",
-        "title": "Dockerizing a Fullstack Application crafted in MySQL, Spring Boot & React with Docker Compose",
+        "id": "65e442cde8081f8a3e5936ec",
+        "url": "https://blog.saurabhmahajan.com/code-cloud-and-coffee-deploying-a-mysql-spring-and-react-application-on-aws-free-tier-with-cicd-through-github-actions",
+        "title": "Code, Cloud and Coffee: Deploying a MySQL, Spring and React application on AWS Free Tier with CI/CD through GitHub Actions",
         "coverImage": {
-            "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1706115113114/727a9d78-9507-4b47-8c1d-8a260ea96abb.png"
+            "url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1706989675414/41a953d6-441f-4ab8-853f-df958649a6c5.png"
         },
-        "brief": "Welcome to the core of modern development practices, where Docker Compose orchestrates a symphony for your fullstack app. As a dynamic Fullstack Software Engineer, you grasp the pivotal role containerization plays in shaping software development.\nThi...",
-        "publishedAt": "2024-02-14T20:10:10.459Z",
-        "readTimeInMinutes": 12
+        "brief": "Embarking on the AWS Free Tier journey, I set out to weave a tapestry of technology by deploying a full-stack application, combining the power of MySQL, Spring, and React. This blog serves as a chronicle of my exploration into the world ...",
+        "publishedAt": "2024-03-03T09:28:45.325Z",
+        "readTimeInMinutes": 17
     },
     {
         "id": "65be4868e2445c08eb35dde4",

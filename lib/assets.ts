@@ -18,15 +18,18 @@ import css from '@/public/skills/css.png';
 import docker from '@/public/skills/docker.png';
 import dockercompose from '@/public/skills/dockercompose.png'
 import dotnet from '@/public/skills/dotnet.png';
+import expressjs from '@/public/skills/expressjs.png';
 import git from '@/public/skills/git.png';
 import github from '@/public/skills/github.png';
 import githubactions from '@/public/skills/githubactions.png'
 import html from '@/public/skills/html.png';
 import java from '@/public/skills/java.png';
 import javascript from '@/public/skills/javascript.png';
-import jira from '@/public/skills/jira.png'
+import jira from '@/public/skills/jira.png';
+import mongo from '@/public/skills/mongo.png';
 import mui from '@/public/skills/mui.png';
 import mysql from '@/public/skills/mysql.png';
+import nodejs from '@/public/skills/nodejs.png';
 import postgresql from '@/public/skills/postgresql.png';
 import python from '@/public/skills/python.png';
 import reactjs from '@/public/skills/reactjs.png';
@@ -40,6 +43,7 @@ import typescript from '@/public/skills/typescript.png';
 import portfolio from '@/public/projects/portfolio.png';
 import portfolio3d from '@/public/projects/3d-portfolio.png';
 import opus from '@/public/projects/opus.png';
+import acadia from '@/public/projects/acadia.png';
 import emeraldoasis from '@/public/projects/emerald-oasis.png';
 
 import sunbeam from '@/public/education/sunbeam.png';
@@ -79,6 +83,7 @@ export {
     docker,
     dockercompose,
     dotnet,
+    expressjs,
     git,
     github,
     githubactions,
@@ -86,8 +91,10 @@ export {
     java,
     javascript,
     jira,
+    mongo,
     mui,
     mysql,
+    nodejs,
     postgresql,
     python,
     reactjs,
@@ -101,6 +108,7 @@ export {
     portfolio,
     portfolio3d,
     opus,
+    acadia,
     emeraldoasis,
 
     sunbeam,
