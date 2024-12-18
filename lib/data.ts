@@ -63,13 +63,13 @@ export const socials: Social[] = [
     },
     {
         name: 'Github',
-        link: 'https://github.com/saurabhthecodewizard/',
+        link: 'https://github.com/saurhub49/',
         icon: FaGithub,
         iconColor: '#333'
     },
     {
         name: 'X',
-        link: 'https://twitter.com/CodeWizSaurabh/',
+        link: 'https://twitter.com/saurhub49/',
         icon: FaXTwitter,
         iconColor: '#000000'
     },
@@ -305,7 +305,7 @@ export const projects: Project[] = [
             },
         ] as ProjectTag[],
         image: opus,
-        repository: "https://github.com/saurabhthecodewizard/opus"
+        repository: "https://github.com/saurhub49/opus"
     },
     {
         name: "Acadia",
@@ -363,7 +363,7 @@ export const projects: Project[] = [
         ] as ProjectTag[],
         image: acadia,
         link: 'https://acadia-lms.vercel.app/',
-        repository: "https://github.com/saurabhthecodewizard/lms"
+        repository: "https://github.com/saurhub49/lms"
     },
     {
         name: "Portfolio",
@@ -405,7 +405,7 @@ export const projects: Project[] = [
         ] as ProjectTag[],
         image: portfolio,
         link: 'https://portfolio.saurabhmahajan.com/',
-        repository: "https://github.com/saurabhthecodewizard/portfolio",
+        repository: "https://github.com/saurhub49/portfolio",
     },
     {
         name: "3d Portfolio",
@@ -447,7 +447,7 @@ export const projects: Project[] = [
         ] as ProjectTag[],
         image: portfolio3d,
         link: 'https://saurabh-the-dev.netlify.app/',
-        repository: "https://github.com/saurabhthecodewizard/3d-portfolio-for-dev",
+        repository: "https://github.com/saurhub49/3d-portfolio-for-dev",
     },
     {
         name: "Emerald Oasis",
@@ -480,7 +480,7 @@ export const projects: Project[] = [
             },
         ] as ProjectTag[],
         image: emeraldoasis,
-        repository: "https://github.com/saurabhthecodewizard/Emerald-Oasis",
+        repository: "https://github.com/saurhub49/Emerald-Oasis",
     },
 ];
 
